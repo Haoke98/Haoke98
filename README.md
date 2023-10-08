@@ -16,10 +16,10 @@ Here are some ideas to get you started:
 
 
  
-📫 How to reach me: flowerethan@aol.com <br>
-[![Linkedin: VPA](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ethanflower1903/)
+📫 How to reach me:  <br>
+[![Linkedin: VPA]()
 
-[![website](https://img.shields.io/badge/stackoverflow-c8d6e5.svg?&style=for-the-badge&logo=stackoverflow&logoColor=orange)](https://stackoverflow.com/users/17020883/ethan)
+[![website]()
 
 
 
