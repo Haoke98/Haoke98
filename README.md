@@ -17,9 +17,9 @@ Here are some ideas to get you started:
 
  
 📫 How to reach me:  <br>
-[![Linkedin: VPA]()
+![Linkedin: VPA](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)
 
-[![website]()
+![website](https://img.shields.io/badge/stackoverflow-c8d6e5.svg?&style=for-the-badge&logo=stackoverflow&logoColor=orange)
 
 
 
