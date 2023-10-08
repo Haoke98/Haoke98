@@ -1,8 +1,5 @@
 ### Hi there 👋
 
-
-**Haoke98/Haoke98** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
@@ -27,6 +24,6 @@ Here are some ideas to get you started:
 
 
 
-<h1 align="center">Hi 👋, I'm ETHAN FLOWER</h1>
+<h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>
 <h3 align="center">I am a DEVOPS ENGINEER</h3>
 <img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"><br />
