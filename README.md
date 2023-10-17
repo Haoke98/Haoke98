@@ -17,5 +17,5 @@
   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=20&layout=compact&count_private=true&theme=tokyonight&hide_border=true" width="41%"/>
 </div>
 
-![github contribution grid snake animation](https://raw.githubusercontent.com/jorhelp/jorhelp/output/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
+![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=UniversalFormatKit)](https://github.com/Haoke98/UniversalFormatKit)
