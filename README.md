@@ -19,3 +19,5 @@
   </div>
   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=20&layout=compact&count_private=true&theme=radical&hide_border=true" width="41%"/>
 </div>
+
+![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Haoke98)
