@@ -13,6 +13,6 @@
 - ⚡ Fun fact: ...
 <img align="right" alt="Coding" width="400" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&theme=onedark"><br />
 <div width="100%">
-  <img align="left" alt="jor's Github Stats" src="https://github-readme-stats.vercel.app/api?username=jorhelp&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true" width="50%"/>
-  <img align="right" alt="jor's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jorhelp&langs_count=10&layout=compact&theme=radical&hide_border=true" width="41%"/>
+  <img align="left" alt="jor's Github Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=radical&hide_border=true" width="50%"/>
+  <img align="right" alt="jor's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=10&layout=compact&theme=radical&hide_border=true" width="41%"/>
 </div>
