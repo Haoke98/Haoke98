@@ -13,8 +13,8 @@
 - ⚡ Fun fact: ...
 - 
 <div width="100%">
-  <img align="left" alt="Haoke98's Github Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=merko&hide_border=true" width="50%"/>
-  <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=20&layout=compact&count_private=true&theme=merko&hide_border=true" width="41%"/>
+  <img align="left" alt="Haoke98's Github Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=gruvbox&hide_border=true" width="50%"/>
+  <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=20&layout=compact&count_private=true&theme=gruvbox&hide_border=true" width="41%"/>
 </div>
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=CVE)](https://github.com/Haoke98/CVE)
