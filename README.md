@@ -18,6 +18,4 @@
 </div>
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=UniversalFormatKit)](https://github.com/Haoke98/UniversalFormatKit)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=MasterProxier)](https://github.com/Haoke98/MasterProxier)
 
