@@ -19,13 +19,20 @@
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
 
-<a href="https://github.com/Haoke98/stats-cards">
+
 <div width="100%">
-  <img align="left" src="https://stats.justsong.cn/api/github?username=Haoke98&theme=blue-green" alt="Haoke98's LeetCode Stats" width="46%" />
-  <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" alt="Haoke98's Zhihu Stats" width="46%" /> 
+  <img align="left" src="https://stats.justsong.cn/api/github?username=Haoke98&theme=blue-green" alt="Haoke98's LeetCode Stats" width="47%" />
+  <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" alt="Haoke98's Zhihu Stats" width="47%" /> 
 </div>
-</a>
 
 
-![skills](https://skillicons.dev/icons?i=c,cpp,go,py,html,css,js,nodejs,java,md,pytorch,tensorflow,django,flask,fastapi,express,qt,react,cmake,docker,git,linux,nginx,mysql,redis,sqlite,githubactions,heroku,vercel,visualstudio,vscode)
+<h1>我会</h1>
+
+![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,py,pytorch,tensorflow,django,flask,fastapi,regex,selenium,html,css,js,ts,jquery,bootstrap,react,nextjs,electron,vue,vite,nodejs,express,java,spring,maven,gradle,php,md,latex,qt,unity,cmake,git,linux,nginx,docker,hibernate,mysql,postgresql,sqlite,mongodb,redis,elasticsearch,qdrant,githubactions,postman,visualstudio,vscode,idea,androidstudio,arduino,ps,cloudflare,azure)
+
+
+
+## 正在学&准备学
+
+![skills](https://skillicons.dev/icons?i=kotlin,flutter,swift,scala,kafka,rust,'perl',coffeescript,aiscript,vercel,pr,ai,ae)
 
