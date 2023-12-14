@@ -28,11 +28,11 @@
 
 <h1>我会</h1>
 
-![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,py,pytorch,tensorflow,django,flask,fastapi,regex,selenium,html,css,js,ts,jquery,bootstrap,react,nextjs,electron,vue,vite,nodejs,express,java,spring,maven,gradle,php,md,latex,qt,unity,cmake,git,linux,nginx,docker,hibernate,mysql,postgresql,sqlite,mongodb,redis,elasticsearch,qdrant,githubactions,postman,visualstudio,vscode,idea,androidstudio,arduino,ps,cloudflare,azure)
+![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,py,pytorch,tensorflow,django,flask,fastapi,regex,selenium,html,css,js,ts,jquery,bootstrap,threejs,nextjs,electron,webpack,vue,vite,nodejs,express,java,spring,rabbitmq,maven,gradle,php,md,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,git,linux,bsd,nginx,docker,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,idea,androidstudio,postman,ps,autocad,cloudflare,azure,github,githubactions,gitlab,stackoverflow)
 
 
 
 ## 正在学&准备学
 
-![skills](https://skillicons.dev/icons?i=kotlin,flutter,swift,scala,kafka,rust,'perl',coffeescript,aiscript,vercel,pr,ai,ae)
+![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel)
 
