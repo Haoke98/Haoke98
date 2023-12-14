@@ -21,8 +21,8 @@
 
 <a href="https://github.com/Haoke98/stats-cards">
 <div width="100%">
-  <img align="left" src="https://stats.justsong.cn/api/leetcode/?username=Haoke98&theme=light" alt="Haoke98's LeetCode Stats" width="41%" />
-  <img align="right" src="https://stats.justsong.cn/api/zhihu/?username=Haoke98&theme=light" alt="Haoke98's Zhihu Stats" width="41%" /> 
+  <img align="left" src="https://stats.justsong.cn/api/leetcode/?username=Haoke98&theme=light" alt="Haoke98's LeetCode Stats" width="46%" />
+  <img align="right" src="https://stats.justsong.cn/api/zhihu/?username=Haoke98&theme=light" alt="Haoke98's Zhihu Stats" width="46%" /> 
 </div>
 </a>
 
