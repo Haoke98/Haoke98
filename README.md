@@ -22,7 +22,7 @@
 <a href="https://github.com/Haoke98/stats-cards">
 <div width="100%">
   <img align="left" src="https://stats.justsong.cn/api/github?username=Haoke98&theme=one_dark_pro" alt="Haoke98's LeetCode Stats" width="46%" />
-  <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=auro" alt="Haoke98's Zhihu Stats" width="46%" /> 
+  <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=aura" alt="Haoke98's Zhihu Stats" width="46%" /> 
 </div>
 </a>
 
