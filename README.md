@@ -17,10 +17,10 @@
   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&langs_count=20&layout=compact&count_private=true&theme=tokyonight&hide_border=true" width="41%"/>
 </div>
 <a href="https://github.com/Haoke98/stats-cards">
-<p>
-  <img src="https://stats.justsong.cn/api/leetcode/?username=Haoke98&theme=light" alt="Haoke98's LeetCode Stats" width="49%" />
-  <img src="https://stats.justsong.cn/api/zhihu/?username=Haoke98&theme=light" alt="Haoke98's Zhihu Stats" width="49%" /> 
-</p>
+<div width="100%">
+  <img align="left" src="https://stats.justsong.cn/api/leetcode/?username=Haoke98&theme=light" alt="Haoke98's LeetCode Stats" width="49%" />
+  <img align="right" src="https://stats.justsong.cn/api/zhihu/?username=Haoke98&theme=light" alt="Haoke98's Zhihu Stats" width="49%" /> 
+</div>
 </a>
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
