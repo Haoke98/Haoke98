@@ -33,6 +33,7 @@
 <a href="https://qdrant.tech/"><img width="10%" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a>
 <a href="https://huggingface.co/"><img width="10%" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a>
 <a href="https://vitepress.dev/"><img width="10%" src="https://vitepress.dev/vitepress-logo-mini.svg"></a>
+<a href="https://platform.openai.com"><img width="10%" src="openai.svg"></a>
 * Elastic
   * ElasticSearch
     * 集群搭建
@@ -43,7 +44,6 @@
   * EnterpriseSearch
   * Kibana
     * KQL查询
-* GPT
 
 
 ## 正在学&准备学
