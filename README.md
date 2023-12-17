@@ -39,7 +39,7 @@
   * EnterpriseSearch
   * Kibana
     * KQL查询
-
+* Qdrant
 
 ## 正在学&准备学
 
