@@ -19,6 +19,7 @@
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
 
+![](https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight)
 
 <div width="100%">
   <img align="left" src="https://stats.justsong.cn/api/github?username=Haoke98&theme=blue-green" alt="Haoke98's LeetCode Stats" width="47%" />
