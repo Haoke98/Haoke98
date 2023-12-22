@@ -47,7 +47,10 @@
     * KQL查询
 
 
-## 正在学&准备学
+## 正在学
+![skills](https://skillicons.dev/icons?i=graphql)
+
+## 准备学
 
 ![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel)
 * P2P
