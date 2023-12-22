@@ -13,7 +13,9 @@
 - 可以接数据处理及数据采集(爬虫), 安全评测、网站开发、安卓应用开发、IOS应用开发, 小程序开发、公众号注册及运营、服务器运维, 智能硬件开发等等。 💰 价格实惠，速度快。 👨🏻 咱老百姓都说好。😄 
 <div width="100%">
   <img align="left" alt="Haoke98's Github Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="56%"/>
-  <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="38%"/>
+<!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="38%"/> -->
+  <img align="right" alt="Haoke98's Top Languages" src="https://github.com/Haoke98/github-readme-stats/raw/Beyond100/assets/personal_access_token_0.5_0.5_no_fork_20_language_per_repo_20_lang_final.svg" width="38%"/>
+  
 </div>
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
