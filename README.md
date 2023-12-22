@@ -32,7 +32,7 @@
 
 
 ## 已会
-![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,bootstrap,nextjs,electron,webpack,vite,nodejs,express,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
+![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,bootstrap,nextjs,electron,webpack,vite,nodejs,express,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,unity,cmake,raspberrypi,arduino,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
 <br/>
 <table style="border:none;">
   <tr>
@@ -49,9 +49,9 @@
 
 
 ## 正在学
-![skills](https://skillicons.dev/icons?i=graphql)
+![skills](https://skillicons.dev/icons?i=graphql,qt)
 
 ## 准备学
 
-![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel)
+![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel,sentry)
 * P2P / Spark
