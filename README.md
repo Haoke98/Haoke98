@@ -51,9 +51,9 @@
 
 
 ## 正在学
-![skills](https://skillicons.dev/icons?i=graphql,qt)
+![skills](https://skillicons.dev/icons?i=graphql,qt,vercel)
 
 ## 准备学
 
-![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel,sentry,gcp)
+![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
 * P2P / Spark
