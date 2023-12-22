@@ -1,9 +1,8 @@
 
 <h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>
-<h3 align="center">I am a DEVOPS ENGINEER</h3>
 <!---<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"><br />--->
 
-- 🔭 I’m currently working on ...
+- 🔭 I’m currently working on ... 
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
@@ -35,10 +34,18 @@
 ## 已会
 ![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,bootstrap,nextjs,electron,webpack,vite,nodejs,express,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
 <br/>
-<a href="https://qdrant.tech/"><img width="10%" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a>
-<a href="https://huggingface.co/"><img width="10%" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a>
-<a href="https://vitepress.dev/"><img width="10%" src="https://vitepress.dev/vitepress-logo-mini.svg"></a>
-<a href="https://platform.openai.com"><img width="10%" src="openai.svg"></a>
+<table style="border:none;">
+  <tr>
+    <td><a href="https://qdrant.tech/"><img width="40px" height="40px" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a></td>
+    <td><a href="https://huggingface.co/"><img width="40px" height="40px"  src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a></td>
+    <td><a href="https://vitepress.dev/"><img width="40px" height="40px"  src="https://vitepress.dev/vitepress-logo-mini.svg"></a></td>
+    <td><a href="https://platform.openai.com"><img width="40px" height="40px"  src="openai.svg"></a></td>
+  </tr>
+</table>
+
+
+
+
 
 
 ## 正在学
@@ -47,5 +54,4 @@
 ## 准备学
 
 ![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,vercel)
-* P2P
-* Spark
+* P2P / Spark
