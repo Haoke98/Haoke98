@@ -28,7 +28,7 @@
 
 
 ## 精通
-![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,threejs,vue,git,github,androidstudio,idea,postman,docker,md)
+![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,js,ts,jquery,threejs,vue,git,github,androidstudio,idea,postman,docker,md,linux,bsd)
 * Elastic
   * ElasticSearch
     * 集群搭建
@@ -42,7 +42,7 @@
 
 
 ## 已会
-![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,js,ts,jquery,bootstrap,nextjs,electron,webpack,vite,nodejs,express,java,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,git,linux,bsd,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
+![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,bootstrap,nextjs,electron,webpack,vite,nodejs,express,java,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
 <br/>
 <a href="https://qdrant.tech/"><img width="10%" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a>
 <a href="https://huggingface.co/"><img width="10%" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a>
