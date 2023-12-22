@@ -27,9 +27,11 @@
 </div>
 
 
-<h1>我会</h1>
+## 精通
+![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,threejs,vue)
 
-![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,py,pytorch,tensorflow,django,flask,fastapi,regex,selenium,html,css,js,ts,jquery,bootstrap,threejs,nextjs,electron,webpack,vue,vite,nodejs,express,java,spring,rabbitmq,maven,gradle,php,md,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,git,linux,bsd,nginx,docker,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,idea,androidstudio,postman,ps,autocad,cloudflare,azure,github,githubactions,gitlab,stackoverflow)
+## 已会
+![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,js,ts,jquery,bootstrap,nextjs,electron,webpack,vite,nodejs,express,java,spring,rabbitmq,maven,gradle,php,md,latex,svg,matlab,qt,unity,cmake,raspberrypi,arduino,git,linux,bsd,nginx,docker,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,idea,androidstudio,postman,ps,autocad,cloudflare,azure,github,githubactions,gitlab,stackoverflow)
 <br/>
 <a href="https://qdrant.tech/"><img width="10%" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a>
 <a href="https://huggingface.co/"><img width="10%" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a>
