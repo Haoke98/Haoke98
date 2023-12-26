@@ -52,6 +52,12 @@
 
 ## 正在学
 ![skills](https://skillicons.dev/icons?i=graphql,qt,vercel)
+<table style="border:none;">
+  <tr>
+    <td><a href="https://vrm.dev/"><img width="40px" height="40px" src="https://vrm.dev/_static/favicon.ico"></a></td>
+    <td><a href="https://www.live2d.com/"><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a></td>
+  </tr>
+</table>
 
 ## 准备学
 
