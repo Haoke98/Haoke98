@@ -29,12 +29,16 @@
 
 
 ## 精通
-![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,js,ts,jquery,threejs,vue,java,git,github,androidstudio,idea,postman,docker,md,linux,bsd)
+![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,js,ts,jquery,threejs,vue,java,git,github,androidstudio,idea,postman,docker,md,linux,bsd,nginx)
 * Elastic / ElasticSearch / 集群搭建 / 监控&维护 / DSL查询 / Python SDK / Java SDK / EnterpriseSearch / Kibana / KQL查询
 
 
-## 已会
-![skills](https://skillicons.dev/icons?i=c,cpp,cs,dotnet,go,pytorch,tensorflow,regex,html,css,bootstrap,nextjs,electron,webpack,vite,nodejs,express,spring,rabbitmq,maven,gradle,php,latex,svg,matlab,unity,cmake,raspberrypi,arduino,nginx,hibernate,mysql,postgresql,sqlite,mongodb,redis,bash,powershell,vim,eclipse,visualstudio,vscode,ps,autocad,cloudflare,azure,githubactions,gitlab,stackoverflow)
+## 有丰富经验
+![skills](https://skillicons.dev/icons?i=cs,go,regex,html,css,electron,nodejs,express,spring,latex,svg,matlab,unity,cmake,raspberrypi,arduino,hibernate,mysql,postgresql,sqlite,redis,bash,powershell,vim,visualstudio,vscode,ps,cloudflare,azure,githubactions,gitlab,stackoverflow)
+
+## 接触过&会使用
+![skills](https://skillicons.dev/icons?i=c,cpp,dotnet,pytorch,tensorflow,bootstrap,nextjs,webpack,vite,php,rabbitmq,maven,gradle,mongodb,eclipse,autocad)
+
 <br/>
 <table style="border:none;">
   <tr>
