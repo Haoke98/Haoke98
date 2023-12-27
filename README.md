@@ -36,9 +36,6 @@
 ## 有丰富经验
 ![skills](https://skillicons.dev/icons?i=cs,go,regex,html,css,electron,nodejs,express,spring,latex,svg,matlab,unity,cmake,raspberrypi,arduino,hibernate,mysql,postgresql,sqlite,redis,bash,powershell,vim,visualstudio,vscode,ps,cloudflare,azure,githubactions,gitlab,stackoverflow)
 
-## 接触过&会使用
-![skills](https://skillicons.dev/icons?i=c,cpp,dotnet,pytorch,tensorflow,bootstrap,nextjs,webpack,vite,php,rabbitmq,maven,gradle,mongodb,eclipse,autocad)
-
 <br/>
 <table style="border:none;">
   <tr>
@@ -50,6 +47,8 @@
 </table>
 
 
+## 接触过&会使用
+![skills](https://skillicons.dev/icons?i=c,cpp,dotnet,pytorch,tensorflow,bootstrap,nextjs,webpack,vite,php,rabbitmq,maven,gradle,mongodb,eclipse,autocad)
 
 
 
