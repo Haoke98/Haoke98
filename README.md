@@ -16,7 +16,7 @@
 <!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="38%"/> -->
   <img align="right" alt="Haoke98's Top Languages" src="https://github.com/Haoke98/github-readme-stats/raw/Beyond100/assets/personal_access_token_0.5_0.5_no_fork_20_language_per_repo_20_lang_final.svg" width="38%"/>
   
-  <img align="left" alt="Haoke98's Github Stats" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=blue-green&hide_border=true&layout=compact&custom_title=OnlyPublicRepos&cache_seconds=1800" width="38%"/>
+  <img align="left" alt="Haoke98's Github Stats" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=OnlyPublicRepos&cache_seconds=1800" width="38%"/>
 </div>
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
