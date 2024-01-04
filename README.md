@@ -60,10 +60,11 @@
   <tr>
     <td><a href="https://vrm.dev/"><img width="40px" height="40px" src="https://vrm.dev/_static/favicon.ico"></a></td>
     <td><a href="https://www.live2d.com/"><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a></td>
+    <td><a href="https://www.blender.org" target="_blank"><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a></td>
   </tr>
 </table>
 
 ## 准备学
 
-![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,blender,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
+![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
 * P2P / Spark
