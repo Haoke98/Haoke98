@@ -43,7 +43,8 @@
     <td><a href="https://qdrant.tech/"><img width="40px" height="40px" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a></td>
     <td><a href="https://huggingface.co/"><img width="40px" height="40px"  src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a></td>
     <td><a href="https://vitepress.dev/"><img width="40px" height="40px"  src="https://vitepress.dev/vitepress-logo-mini.svg"></a></td>
-    <td><a href="https://platform.openai.com"><img width="40px" height="40px"  src="openai.svg"></a></td>
+    <td><a target="_blank" href="https://platform.openai.com" ><img width="40px" height="40px"  src="openai.svg"></a></td>
+    <td><a target="_blank" href="https://mermaid.js.org/"><img width="40px" height="40px"  title="Mermaid.js" src="https://mermaid.js.org/favicon.ico"></a></td>
   </tr>
 </table>
 
