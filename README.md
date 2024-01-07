@@ -1,3 +1,5 @@
+![](https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 <h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>
 <!---<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"><br />--->
