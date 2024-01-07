@@ -1,4 +1,4 @@
-![258283155-c43d2d60-7e75-4dd6-a918-9ad0b9c710cc](https://github.com/Haoke98/Haoke98/assets/55436234/c7f387e5-0781-4b38-851c-4098e892da97)![](https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f)
+![](https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 <h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>
