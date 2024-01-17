@@ -64,11 +64,14 @@
     <td><a href="https://graphql.org/" target="_blank"><img title="graphql:聚合API统一化语法" width="40px" height="40px"  src="https://skillicons.dev/icons?i=graphql"></a></td>
     <td><a href="https://www.qt.io/" target="_blank"><img title="QT:桌面应用程序开发工具" width="40px" height="40px"  src="https://skillicons.dev/icons?i=qt"></a></td>
     <td><a href="https://vercel.com/" target="_blank"><img title="Vercel:线上部署平台" width="40px" height="40px"  src="https://skillicons.dev/icons?i=vercel"></a></td>
-    <td><a href="https://vrm.dev/"><img width="40px" height="40px" src="https://vrm.dev/_static/favicon.ico"></a></td>
+    <td><a href="https://vrm.dev/"><img width="40px" height="40px" src="https://vrm.dev/favicon.ico"></a></td>
     <td><a href="https://www.live2d.com/"><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a></td>
     <td><a href="https://www.blender.org" target="_blank"><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a></td>
     <td><a href="https://bower.io/" target="_blank"><img title="bower:Web项目包管理器,过期了" width="40px" height="40px"  src="https://bower.io/img/bower-logo.svg"></a></td>
     <td><a href="https://polymer-library.polymer-project.org" target="_blank"><img title="polymer:Web组件解析引擎,类似于React和Vue" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/2159051"></a></td>
+    <td>Blazer</td>
+    <td>WinForms</td>
+    <td>WPF</td>
   </tr>
 </table>
 
