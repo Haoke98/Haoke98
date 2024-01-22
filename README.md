@@ -72,6 +72,7 @@
     <td>Blazer</td>
     <td>WinForms</td>
     <td>WPF</td>
+    <td><a href="https://github.com/secdev/scapy" target="_blank"><img title="Scapy" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a></td>
   </tr>
 </table>
 
