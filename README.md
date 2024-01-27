@@ -72,11 +72,20 @@
     <td>Blazer</td>
     <td>WinForms</td>
     <td>WPF</td>
+    <td><a href="https://github.com/CompVis/stable-diffusion">StableDiffusion</a></td>
+    <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">StableDiffusionWebUI</a></td>
     <td><a href="https://github.com/secdev/scapy" target="_blank"><img title="Scapy" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a></td>
   </tr>
 </table>
 
 ## 准备学
-
-![skills](https://skillicons.dev/icons?i=swift,rust,kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
-* P2P / Spark
+<table style="border:none;">
+  <tr>
+    <td><a href="https://graphql.org/" target="_blank"><img title="Swift" width="40px" height="40px"  src="https://skillicons.dev/icons?i=swift"></a></td>
+    <td><a href="https://spark.apache.org/" target="_blank"><img title="Spark" width="40px" height="40px"  src="https://spark.apache.org/images/spark-logo-rev.svg"></a></td>
+    <td><a href="https://en.wikipedia.org/wiki/Peer-to-peer" target="_blank">P2P</a></td>
+    <td><a href="https://www.rust-lang.org/"><img title="Rust" width="40px" height="40px"  src="https://github.com/tandpfun/skill-icons/raw/main/icons/Rust.svg"></a></td>
+    <td><a href="https://learn.microsoft.com/en-us/dotnet/visual-basic/"><img title="VisualBasic" width="40px" height="40px" src="https://github.com/CommunityVB.png?size=40"></a></td>
+    <td><img src="https://skillicons.dev/icons?i=kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp"></td>
+  </tr>
+</table>
