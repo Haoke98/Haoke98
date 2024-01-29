@@ -33,7 +33,7 @@
 
 
 ## 精通
-![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,js,ts,jquery,threejs,vue,java,git,github,androidstudio,idea,postman,docker,md,linux,bsd,nginx)
+![skills](https://skillicons.dev/icons?i=py,django,flask,fastapi,selenium,js,ts,jquery,threejs,vue,java,git,github,androidstudio,idea,postman,docker,md,linux,bsd,nginx,elasticsearch,anaconda)
 * Elastic / ElasticSearch / 集群搭建 / 监控&维护 / DSL查询 / Python SDK / Java SDK / EnterpriseSearch / Kibana / KQL查询
 
 
@@ -53,7 +53,7 @@
 
 
 ## 接触过&会使用
-![skills](https://skillicons.dev/icons?i=c,cpp,dotnet,pytorch,tensorflow,bootstrap,nextjs,webpack,vite,php,rabbitmq,maven,gradle,mongodb,eclipse,autocad)
+![skills](https://skillicons.dev/icons?i=c,cpp,dotnet,pytorch,tensorflow,bootstrap,nextjs,webpack,vite,php,rabbitmq,maven,gradle,mongodb,eclipse,autocad,opencv)
 
 
 
