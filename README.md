@@ -59,21 +59,20 @@
 
 
 ## 正在学
-![](https://skillicons.dev/icons?i=graphql,qt,vercel)
-
+<img width="150px" height="50px" src="https://skillicons.dev/icons?i=graphql,qt,vercel" align="left">
+<a href="https://vrm.dev/" align="left" ><img width="40px" height="40px" src="https://vrm.dev/favicon.ico"></a>
+<a href="https://www.live2d.com/" align="left" ><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a>
+<a href="https://www.blender.org" target="_blank" align="left" ><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a>
+<a href="https://bower.io/" target="_blank" align="left" ><img title="bower:Web项目包管理器,过期了" width="40px" height="40px"  src="https://bower.io/img/bower-logo.svg"></a>
+<a href="https://polymer-library.polymer-project.org" target="_blank" align="left" ><img title="polymer:Web组件解析引擎,类似于React和Vue" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/2159051"></a>
+<a href="https://github.com/secdev/scapy" target="_blank" align="left" ><img title="Scapy" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a>
 <table style="border:none;">
   <tr>
-    <td><a href="https://vrm.dev/"><img width="40px" height="40px" src="https://vrm.dev/favicon.ico"></a></td>
-    <td><a href="https://www.live2d.com/"><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a></td>
-    <td><a href="https://www.blender.org" target="_blank"><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a></td>
-    <td><a href="https://bower.io/" target="_blank"><img title="bower:Web项目包管理器,过期了" width="40px" height="40px"  src="https://bower.io/img/bower-logo.svg"></a></td>
-    <td><a href="https://polymer-library.polymer-project.org" target="_blank"><img title="polymer:Web组件解析引擎,类似于React和Vue" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/2159051"></a></td>
     <td>Blazer</td>
     <td>WinForms</td>
     <td>WPF</td>
     <td><a href="https://github.com/CompVis/stable-diffusion">StableDiffusion</a></td>
-    <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">StableDiffusionWebUI</a></td>
-    <td><a href="https://github.com/secdev/scapy" target="_blank"><img title="Scapy" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a></td>
+    <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">StableDiffusionWebUI</a></td>    
   </tr>
 </table>
 
