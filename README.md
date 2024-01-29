@@ -65,8 +65,8 @@
 <a href="https://www.blender.org" target="_blank" align="left" ><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a>
 <a href="https://bower.io/" target="_blank" align="left" ><img title="bower:Web项目包管理器,过期了" width="40px" height="40px"  src="https://bower.io/img/bower-logo.svg"></a>
 <a href="https://polymer-library.polymer-project.org" target="_blank" align="left" ><img title="polymer:Web组件解析引擎,类似于React和Vue" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/2159051"></a>
-<a href="https://github.com/secdev/scapy" target="_blank" align="left" ><img title="Scapy" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a>
-<table style="border:none;">
+<a href="https://github.com/secdev/scapy" target="_blank" align="left" ><img title="Scapy" width="50px" height="50px"  src="https://avatars.githubusercontent.com/u/14927208?s=48&v=4"></a>
+<table align="right">
   <tr>
     <td>Blazer</td>
     <td>WinForms</td>
@@ -77,6 +77,8 @@
 </table>
 
 ## 准备学
+![](https://skillicons.dev/icons?i=kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
+
 <table style="border:none;">
   <tr>
     <td><a href="https://graphql.org/" target="_blank"><img title="Swift" width="40px" height="40px"  src="https://skillicons.dev/icons?i=swift"></a></td>
@@ -84,6 +86,5 @@
     <td><a href="https://en.wikipedia.org/wiki/Peer-to-peer" target="_blank">P2P</a></td>
     <td><a href="https://www.rust-lang.org/"><img title="Rust" width="40px" height="40px"  src="https://github.com/tandpfun/skill-icons/raw/main/icons/Rust.svg"></a></td>
     <td><a href="https://learn.microsoft.com/en-us/dotnet/visual-basic/"><img title="VisualBasic" width="40px" height="40px" src="https://github.com/CommunityVB.png?size=40"></a></td>
-    <td><img src="https://skillicons.dev/icons?i=kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp"></td>
   </tr>
 </table>
