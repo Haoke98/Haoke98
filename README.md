@@ -1,7 +1,8 @@
 ![](https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-<h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>
+<!---<h1 align="center">Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨ </h1>--->
+<a href="https://github.com/Haoke98/Haoke98"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&center=true&vCenter=true&random=false&width=980&height=80&lines=Hi+%F0%9F%91%8B%2C+I'm+Sadam%C2%B7Sadik+%E2%9C%A8+_special_+%E2%9C%A8+" alt="Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨" /></a>
 <!---<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"><br />--->
 
 <img align="right" alt="Haoke98's Github Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="48%"/>
