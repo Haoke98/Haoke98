@@ -40,9 +40,7 @@
 
 ## 有丰富经验
 ![skills](https://skillicons.dev/icons?i=cs,go,regex,html,css,electron,nodejs,express,spring,latex,svg,matlab,unity,cmake,raspberrypi,arduino,hibernate,mysql,postgresql,sqlite,redis,bash,powershell,vim,visualstudio,vscode,ps,cloudflare,azure,githubactions,gitlab,stackoverflow)
-
-<br/>
-<table style="border:none;">
+<table align="right">
   <tr>
     <td><a href="https://qdrant.tech/"><img width="40px" height="40px" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg"></a></td>
     <td><a href="https://huggingface.co/"><img width="40px" height="40px"  src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"></a></td>
