@@ -72,7 +72,9 @@
     <td>WinForms</td>
     <td>WPF</td>
     <td><a href="https://github.com/CompVis/stable-diffusion">StableDiffusion</a></td>
-    <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">StableDiffusionWebUI</a></td>    
+    <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">StableDiffusionWebUI</a></td>
+    <td><a href="https://github.com/celery/celery">Celery</a></td>
+    <td><a href="https://cesium.com/">CeseiumJS</a></td>
   </tr>
 </table>
 
