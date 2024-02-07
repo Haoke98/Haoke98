@@ -59,7 +59,7 @@
 
 
 ## 正在学
-<img width="150px" height="50px" src="https://skillicons.dev/icons?i=graphql,qt,vercel" align="left">
+<img width="250px" height="50px" src="https://skillicons.dev/icons?i=graphql,qt,vercel,flutter,dart" align="left">
 <a href="https://vrm.dev/" align="left" ><img width="40px" height="40px" src="https://vrm.dev/favicon.ico"></a>
 <a href="https://www.live2d.com/" align="left" ><img width="40px" height="40px"  src="https://www.live2d.com/wp-content/themes/cubism_new/assets/img/favicon.ico"></a>
 <a href="https://www.blender.org" target="_blank" align="left" ><img title="blender:开源的3D建模软件" width="40px" height="40px"  src="https://avatars.githubusercontent.com/u/52924476"></a>
@@ -79,7 +79,7 @@
 </table>
 
 ## 准备学
-![](https://skillicons.dev/icons?i=kotlin,flutter,dart,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
+![](https://skillicons.dev/icons?i=kotlin,zig,scala,kafka,perl,ruby,lua,babel,coffeescript,aiscript,tauri,react,reactivex,atom,sass,windicss,d3,wordpress,unreal,figma,pr,ai,ae,ipfs,kubernetes,dynamodb,openstack,appwrite,sentry,gcp)
 
 <table style="border:none;">
   <tr>
