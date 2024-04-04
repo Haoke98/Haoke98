@@ -25,9 +25,7 @@
 - 📫 How to reach me: ...
 - 😄 Pronouns: People cannot make money beyond their own knowledge💰
 - ⚡ Fun fact: Sex is overflowing and love is dying💀
-- 可以接数据处理及数据采集(爬虫), 安全评测、
-- 网站开发、安卓应用开发、IOS应用开发, 小程序开发、
-- 公众号注册及运营、服务器运维, 智能硬件开发等等。
+- 可以接数据处理及数据采集(爬虫), 安全评测、网站开发、安卓应用开发、IOS应用开发, 小程序开发、公众号注册及运营、服务器运维, 智能硬件开发等等。
 - 💰 价格实惠，速度快。 👨🏻 咱老百姓都说好。😄 
 
 
