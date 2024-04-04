@@ -5,7 +5,7 @@
 <img align="left" alt="Haoke98's Github Stats" src="https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f" />
 <img align="left" alt="Haoke98's Github Stats" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/" />
 
-<img align="right" alt="Haoke98's Github Stats" src="http://1.117.112.57:49000/?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="42%"/>
+<img align="right" alt="Haoke98's Github Stats" src="http://1.117.112.57:49000/?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="34%"/>
 
 
 <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" alt="Haoke98's CSDN Stats" width="30%" /> 
