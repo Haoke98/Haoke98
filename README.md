@@ -20,7 +20,7 @@
 
 
 
-
+#### About Me:
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
 - 🌱 I’m currently learning ...
@@ -32,13 +32,10 @@
 - 可以接数据处理及数据采集(爬虫), 安全评测、网站开发、安卓应用开发、IOS应用开发, 小程序开发、公众号注册及运营、服务器运维, 智能硬件开发等等。
 - 💰 价格实惠，速度快。 👨🏻 咱老百姓都说好。😄 
 
-<br/>
-<img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" />   
-
-#### People and teams I respect and follow: 
+#### Teams/Orgs I respect and follow: 
 * [Spotify](https://github.com/spotify?q=&type=all&language=&sort=stargazers)
 
-  
+<img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" />     
 <!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="31%"/> -->
   
 
