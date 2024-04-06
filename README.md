@@ -34,6 +34,7 @@
 
 #### Teams/Orgs I respect and follow: 
 * [Spotify](https://github.com/spotify?q=&type=all&language=&sort=stargazers)
+* [CompVis](https://github.com/CompVis)
 
 <img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" />     
 <!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="31%"/> -->
