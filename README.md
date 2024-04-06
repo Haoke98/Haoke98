@@ -15,7 +15,7 @@
   
 <img align="right" alt="Haoke98's Top Languages" src="http://1.117.112.57:49000/top-langs?username=haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=With%20Public%2BPrivate%20Repos&cache_seconds=1800" width="33%"/>
 
-<img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" /> 
+
 
 
 
@@ -32,13 +32,16 @@
 - 可以接数据处理及数据采集(爬虫), 安全评测、网站开发、安卓应用开发、IOS应用开发, 小程序开发、公众号注册及运营、服务器运维, 智能硬件开发等等。
 - 💰 价格实惠，速度快。 👨🏻 咱老百姓都说好。😄 
 
+<br/>
+<img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" />   
+
 #### People and teams I respect and follow: 
 * [Spotify](https://github.com/spotify?q=&type=all&language=&sort=stargazers)
 
   
 <!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="31%"/> -->
   
-  
+
   
 
 
