@@ -3,7 +3,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&center=true&vCenter=true&random=false&width=980&height=80&lines=Hi+%F0%9F%91%8B%2C+I'm+Sadam%C2%B7Sadik+%E2%9C%A8+_special_+%E2%9C%A8+" alt="Hi 👋, I'm Sadam·Sadik ✨ _special_ ✨" />
 
 
-<img align="right" alt="Haoke98's Github Stats" src="http://1.117.112.57:49000/?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="40%"/>
+<img align="right" alt="Haoke98's Github Stats" src="http://grs.0p.fit/?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="40%"/>
 
 
 
@@ -13,7 +13,7 @@
 
 <img align="right" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" alt="Haoke98's CSDN Stats" width="28%" /> 
   
-<img align="right" alt="Haoke98's Top Languages" src="http://1.117.112.57:49000/top-langs?username=haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=With%20Public%2BPrivate%20Repos&cache_seconds=1800" width="33%"/>
+<img align="right" alt="Haoke98's Top Languages" src="http://grs.0p.fit/top-langs?username=haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=With%20Public%2BPrivate%20Repos&cache_seconds=1800" width="33%"/>
 
 
 
