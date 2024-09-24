@@ -43,8 +43,14 @@
 
 ![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=TTMS-beego)](https://github.com/Haoke98/TTMS-beego)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=super-http-catcher)](https://github.com/Haoke98/super-http-catcher)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FlowPilot)](https://github.com/Haoke98/FlowPilot)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=CTFD-3DS)](https://github.com/Haoke98/CTFD-3DS)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=django-go-view)](https://github.com/Haoke98/django-go-view)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=LabelPrintHelper)](https://github.com/Haoke98/LabelPrintHelper)
+
+
 
 
 
