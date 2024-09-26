@@ -50,7 +50,9 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FlowPilot)](https://github.com/Haoke98/FlowPilot)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=LabelPrintHelper)](https://github.com/Haoke98/LabelPrintHelper)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=CTFD-3DS)](https://github.com/Haoke98/CTFD-3DS)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=video2gif)](https://github.com/Haoke98/video2gif)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=Turing-Utopia-Experiment)](https://github.com/Haoke98/Turing-Utopia-Experiment)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=DeepFC)](https://github.com/Haoke98/DeepFC)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=docker-cli)](https://github.com/Haoke98/docker-cli)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=django-go-view)](https://github.com/Haoke98/django-go-view)
 
