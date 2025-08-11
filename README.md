@@ -60,10 +60,11 @@
 
 #### 我开发的依赖
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=DjangoAsyncAdmin)](https://github.com/Haoke98/DjangoAsyncAdmin)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=django-celery-stack)](https://github.com/Haoke98/django-celery-stack.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=django-go-view)](https://github.com/Haoke98/django-go-view)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=LabelPrintHelper)](https://github.com/Haoke98/LabelPrintHelper)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FDEasyChainApi-PythonSDK)](https://github.com/Haoke98/FDEasyChainApi-PythonSDK.git)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=django-celery-stack)](https://github.com/Haoke98/django-celery-stack.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=saer-openapi-sdk)](https://github.com/Haoke98/saer-openapi-sdk.git)
 
 #### 我开发的实用工具
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FlowPilot)](https://github.com/Haoke98/FlowPilot)
