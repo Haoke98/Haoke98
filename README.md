@@ -57,6 +57,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=DeepFC)](https://github.com/Haoke98/DeepFC)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=auto-git)](https://github.com/Haoke98/auto-git.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=gitlab-pipline)](https://github.com/Haoke98/gitlab-pipline)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=RAGFlow-pipeline)](https://github.com/Haoke98/RAGFlow-pipeline.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=docker-cli)](https://github.com/Haoke98/docker-cli)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=RuoYi-Agent)](https://github.com/Haoke98/RuoYi-Agent.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=SuperSniffer)](https://github.com/Haoke98/SuperSniffer.git)
