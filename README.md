@@ -38,12 +38,11 @@
 * [Spotify](https://github.com/spotify?q=&type=all&language=&sort=stargazers)
 * [CompVis](https://github.com/CompVis)
 
-<img align="right" src="https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight" alt="Haoke98's CSDN Stats" width="62%" />     
 <!--   <img align="right" alt="Haoke98's Top Languages" src="https://github-readme-stats-two-alpha-95.vercel.app/api/top-langs/?username=Haoke98&langs_count=18&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800&size_weight=0.5&count_weight=0.5&custom_title=Haoke98'sTop-langs" width="31%"/> -->
 
-![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
+![](https://github-profile-trophy.vercel.app/?username=Haoke98&column=9&margin-w=15&margin-h=15&theme=tokyonight)
+![github contribution grid snake animation](https://raw.githubusercontent.com/Haoke98/Haoke98/main/github-contribution-grid-snake-sissa.svg)
 
-# .
 #### 我参与的实用工具 / 二开项目
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ffay&repo=lanproxy)](https://github.com/Haoke98/lanproxy)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jorhelp&repo=Ingram)](https://github.com/Haoke98/Ingram)
@@ -65,6 +64,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=LabelPrintHelper)](https://github.com/Haoke98/LabelPrintHelper)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FDEasyChainApi-PythonSDK)](https://github.com/Haoke98/FDEasyChainApi-PythonSDK.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=saer-openapi-sdk)](https://github.com/Haoke98/saer-openapi-sdk.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=OpenAPI-SDK)](https://github.com/Haoke98/OpenAPI-SDK.git)
 
 #### 我开发的实用工具
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=FlowPilot)](https://github.com/Haoke98/FlowPilot)
