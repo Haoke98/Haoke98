@@ -48,6 +48,8 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=jorhelp&repo=Ingram)](https://github.com/Haoke98/Ingram)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ozheng1993&repo=video2gif)](https://github.com/Haoke98/video2gif)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=HeMOua&repo=HuggingfaceDownloader)](https://github.com/Haoke98/HuggingfaceDownloader.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=nginx-windows)](https://github.com/Haoke98/nginx-windows.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=bawa)](https://github.com/Haoke98/bawa.git)
 
 #### 我开发的系统/软件
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=iCloudDesktop)](https://github.com/Haoke98/iCloudDesktop)
@@ -56,6 +58,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=TTMS-beego)](https://github.com/Haoke98/TTMS-beego)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=allkeeper-desktop)](https://github.com/Haoke98/allkeeper-desktop)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=CTFD-3DS)](https://github.com/Haoke98/CTFD-3DS)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=BeanMusic)](https://github.com/Haoke98/BeanMusic.git)
 
 #### 我开发的依赖
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=DjangoAsyncAdmin)](https://github.com/Haoke98/DjangoAsyncAdmin)
@@ -73,6 +76,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=gitlab-pipline)](https://github.com/Haoke98/gitlab-pipline)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=docker-cli)](https://github.com/Haoke98/docker-cli)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=RuoYi-Agent)](https://github.com/Haoke98/RuoYi-Agent.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=SuperSniffer)](https://github.com/Haoke98/SuperSniffer.git)
 
 
 #### 🧪 实验/研究
