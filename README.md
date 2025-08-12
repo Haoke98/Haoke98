@@ -62,6 +62,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=RuoYi-Agent)](https://github.com/Haoke98/RuoYi-Agent.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=SuperSniffer)](https://github.com/Haoke98/SuperSniffer.git)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=ElasticSearchHelper)](https://github.com/Haoke98/ElasticSearchHelper.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=PgDiff)](https://github.com/Haoke98/PgDiff.git)
 
 #### 🧩 我开发的依赖
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Haoke98&repo=DjangoAsyncAdmin)](https://github.com/Haoke98/DjangoAsyncAdmin)
