@@ -77,15 +77,19 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td><img src="https://img.shields.io/badge/-微信小程序-07C160?logo=wechat" alt="微信小程序"/></td></tr>
 
   <!-- Data & Big Data -->
-  <tr><td rowspan="6"><b>Data &amp; Big Data</b></td>
+  <tr><td rowspan="8"><b>Data &amp; Big Data</b></td>
       <td>Databases</td>
-      <td><img src="https://img.shields.io/badge/-PG-4169E1?logo=postgresql" alt="PostgreSQL"/> <img src="https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb" alt="MongoDB"/> <img src="https://img.shields.io/badge/-Neo4j-4581C3?logo=neo4j" alt="Neo4j"/> <img src="https://img.shields.io/badge/-StarRocks-35287B" alt="StarRocks"/> <img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-PG-4169E1?logo=postgresql" alt="PostgreSQL"/> <img src="https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb" alt="MongoDB"/> <img src="https://img.shields.io/badge/-Neo4j-4581C3?logo=neo4j" alt="Neo4j"/> <img src="https://img.shields.io/badge/-StarRocks-35287B" alt="StarRocks"/></td></tr>
   <tr><td>Search</td>
       <td><img src="https://img.shields.io/badge/-ES-005571?logo=elasticsearch" alt="Elasticsearch"/></td></tr>
   <tr><td>Storage</td>
       <td><img src="https://img.shields.io/badge/-MinIO-C72E49?logo=minio" alt="MinIO"/> <img src="https://img.shields.io/badge/-SeaweedFS-5CB85C" alt="SeaweedFS"/></td></tr>
+  <tr><td>向量存储</td>
+      <td><img src="https://img.shields.io/badge/-Qdrant-DC244C?logo=qdrant" alt="Qdrant"/> <img src="https://img.shields.io/badge/-Milvus-00A1EA?logo=milvus" alt="Milvus"/> <img src="https://img.shields.io/badge/-ES_V8.3+-005571?logo=elasticsearch" alt="ES V8.3+"/></td></tr>
   <tr><td>Streaming</td>
       <td><img src="https://img.shields.io/badge/-Kafka-231F20?logo=apachekafka" alt="Kafka"/></td></tr>
+  <tr><td>计算引擎</td>
+      <td><img src="https://img.shields.io/badge/-Spark-E25A1C?logo=apachespark" alt="Spark"/></td></tr>
   <tr><td>查询语法</td>
       <td><img src="https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL"/> <img src="https://img.shields.io/badge/-KQL-0078D4" alt="KQL"/> <img src="https://img.shields.io/badge/-DSL-005571?logo=elasticsearch" alt="DSL"/></td></tr>
   <tr><td>Processing</td>
@@ -103,6 +107,11 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td><img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux"/></td></tr>
   <tr><td>Panel</td>
       <td><img src="https://img.shields.io/badge/-宝塔-20A53A" alt="宝塔面板"/> <img src="https://img.shields.io/badge/-1Panel-0052CC" alt="1Panel"/></td></tr>
+
+  <!-- Middleware -->
+  <tr><td rowspan="1"><b>中间件</b></td>
+      <td>—</td>
+      <td><img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=rabbitmq" alt="RabbitMQ"/> <img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/> <img src="https://img.shields.io/badge/-Nacos-1B88EE?logo=nacos" alt="Nacos"/></td></tr>
 
   <!-- Task Scheduling -->
   <tr><td rowspan="1"><b>Task Scheduling</b></td>
