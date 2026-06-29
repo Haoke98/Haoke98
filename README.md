@@ -72,12 +72,12 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td>Cross-platform</td>
       <td><img src="https://img.shields.io/badge/-Flutter-02569B?logo=flutter" alt="Flutter"/> <img src="https://img.shields.io/badge/-Uniapp-2B9939" alt="Uniapp"/></td></tr>
   <tr><td>Native</td>
-      <td><img src="https://img.shields.io/badge/-Android_(Java" alt="Android (Java)"/>-3DDC84?logo=android) <img src="https://img.shields.io/badge/-iOS-000000?logo=apple" alt="iOS"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Android_(Java)-3DDC84?logo=android" alt="Android (Java)"/> <img src="https://img.shields.io/badge/-iOS-000000?logo=apple" alt="iOS"/></td></tr>
   <tr><td>Mini Programs</td>
       <td><img src="https://img.shields.io/badge/-微信小程序-07C160?logo=wechat" alt="微信小程序"/></td></tr>
 
   <!-- Data & Big Data -->
-  <tr><td rowspan="5"><b>Data &amp; Big Data</b></td>
+  <tr><td rowspan="6"><b>Data &amp; Big Data</b></td>
       <td>Databases</td>
       <td><img src="https://img.shields.io/badge/-PG-4169E1?logo=postgresql" alt="PostgreSQL"/> <img src="https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb" alt="MongoDB"/> <img src="https://img.shields.io/badge/-Neo4j-4581C3?logo=neo4j" alt="Neo4j"/> <img src="https://img.shields.io/badge/-StarRocks-35287B" alt="StarRocks"/> <img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/></td></tr>
   <tr><td>Search</td>
@@ -85,7 +85,9 @@ I'm a developer who believes **if you do something twice, you should automate it
   <tr><td>Storage</td>
       <td><img src="https://img.shields.io/badge/-MinIO-C72E49?logo=minio" alt="MinIO"/> <img src="https://img.shields.io/badge/-SeaweedFS-5CB85C" alt="SeaweedFS"/></td></tr>
   <tr><td>Streaming</td>
-      <td><img src="https://img.shields.io/badge/-Kafka-231F20?logo=apachekafka" alt="Kafka"/> <img src="https://img.shields.io/badge/-KQL-0078D4" alt="KQL"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Kafka-231F20?logo=apachekafka" alt="Kafka"/></td></tr>
+  <tr><td>查询语法</td>
+      <td><img src="https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL"/> <img src="https://img.shields.io/badge/-KQL-0078D4" alt="KQL"/> <img src="https://img.shields.io/badge/-DSL-005571?logo=elasticsearch" alt="DSL"/></td></tr>
   <tr><td>Processing</td>
       <td><img src="https://img.shields.io/badge/-ETL-FF6F00" alt="ETL"/> <img src="https://img.shields.io/badge/-ELT-9C27B0" alt="ELT"/></td></tr>
 
@@ -117,13 +119,15 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td><img src="https://img.shields.io/badge/-POC设计-FF4500" alt="POC设计"/></td></tr>
 
   <!-- AI / LLM -->
-  <tr><td rowspan="3"><b>AI / LLM</b></td>
-      <td>Frameworks</td>
-      <td><img src="https://img.shields.io/badge/-Transformer-FF6F00" alt="Transformer"/> <img src="https://img.shields.io/badge/-AI_Agent-6C3C9B" alt="AI Agent"/> <img src="https://img.shields.io/badge/-Hermes-8A2BE2" alt="Hermes"/></td></tr>
+  <tr><td rowspan="4"><b>AI / LLM</b></td>
+      <td>深度学习框架</td>
+      <td><img src="https://img.shields.io/badge/-Transformer-FF6F00?logo=pytorch" alt="Transformer"/> <img src="https://img.shields.io/badge/-CNN卷积网络-EE4C2C?logo=pytorch" alt="CNN"/></td></tr>
+  <tr><td>Agent 框架</td>
+      <td><img src="https://img.shields.io/badge/-Hermes_Agent-8A2BE2" alt="Hermes Agent"/> <img src="https://img.shields.io/badge/-OpenClaw-412991" alt="OpenClaw"/> <img src="https://img.shields.io/badge/-AI_Agent-6C3C9B" alt="AI Agent"/></td></tr>
+  <tr><td>计算机视觉</td>
+      <td><img src="https://img.shields.io/badge/-OpenCV-5C3EE8?logo=opencv" alt="OpenCV"/> <img src="https://img.shields.io/badge/-YOLOv8~YOLOv26-00FFFF?logo=yolo" alt="YOLO"/></td></tr>
   <tr><td>Design</td>
       <td><img src="https://img.shields.io/badge/-Skill设计-00BCD4" alt="Skill设计"/> <img src="https://img.shields.io/badge/-MCP设计-FF5722" alt="MCP设计"/></td></tr>
-  <tr><td>Tools</td>
-      <td><img src="https://img.shields.io/badge/-OpenClaw-412991" alt="OpenClaw"/></td></tr>
 </table>
 
 ---
