@@ -18,7 +18,7 @@
 <table>
 <tr>
   <td width="33%" valign="top">
-    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=Top%20Languages&cache_seconds=1800" width="100%"/>
+    <img alt="Top Languages" src="./lang-stats.svg" width="100%"/>
   </td>
   <td width="67%" valign="top">
 

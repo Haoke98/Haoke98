@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360" height="564" viewBox="0 0 360 564"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+  </style>
+  <rect x="0" y="0" width="360" height="564" rx="6" fill="#0d1117"/>
+  <rect x="0" y="0" width="360" height="564" rx="6"
+        fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <text x="16" y="30" fill="#58a6ff" font-size="14" font-weight="700">
+    Top Languages
+  </text>
+  <text x="16" y="50" fill="#c9d1d9" font-size="11" opacity="0.6">
+    Public + Private repos
+  </text>
+
+  <text x="16" y="76" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">JavaScript</text>
+  <rect x="106" y="66" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="66" width="44" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="76" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    18.9%  65.6 MB
+  </text>
+
+  <text x="16" y="100" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Dart</text>
+  <rect x="106" y="90" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="90" width="35" height="10"
+        rx="5" fill="#0e4429"/>
+  <text x="344" y="100" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    14.9%  52.1 MB
+  </text>
+
+  <text x="16" y="124" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Python</text>
+  <rect x="106" y="114" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="114" width="35" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="124" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    14.8%  51.6 MB
+  </text>
+
+  <text x="16" y="148" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Java</text>
+  <rect x="106" y="138" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="138" width="34" height="10"
+        rx="5" fill="#26a641"/>
+  <text x="344" y="148" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    14.7%  51.1 MB
+  </text>
+
+  <text x="16" y="172" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">HTML</text>
+  <rect x="106" y="162" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="162" width="22" height="10"
+        rx="5" fill="#39d353"/>
+  <text x="344" y="172" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    9.6%  33.5 MB
+  </text>
+
+  <text x="16" y="196" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">C</text>
+  <rect x="106" y="186" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="186" width="11" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="196" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    5.0%  17.2 MB
+  </text>
+
+  <text x="16" y="220" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Jupyter Notebook</text>
+  <rect x="106" y="210" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="210" width="8" height="10"
+        rx="5" fill="#0e4429"/>
+  <text x="344" y="220" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    3.7%  12.9 MB
+  </text>
+
+  <text x="16" y="244" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">TypeScript</text>
+  <rect x="106" y="234" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="234" width="8" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="244" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    3.6%  12.5 MB
+  </text>
+
+  <text x="16" y="268" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Perl</text>
+  <rect x="106" y="258" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="258" width="8" height="10"
+        rx="5" fill="#26a641"/>
+  <text x="344" y="268" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    3.5%  12.1 MB
+  </text>
+
+  <text x="16" y="292" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Go</text>
+  <rect x="106" y="282" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="282" width="5" height="10"
+        rx="5" fill="#39d353"/>
+  <text x="344" y="292" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    2.2%  7.7 MB
+  </text>
+
+  <text x="16" y="316" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Vue</text>
+  <rect x="106" y="306" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="306" width="4" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="316" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    1.9%  6.7 MB
+  </text>
+
+  <text x="16" y="340" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">CSS</text>
+  <rect x="106" y="330" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="330" width="4" height="10"
+        rx="5" fill="#0e4429"/>
+  <text x="344" y="340" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    1.8%  6.4 MB
+  </text>
+
+  <text x="16" y="364" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">C++</text>
+  <rect x="106" y="354" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="354" width="3" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="364" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    1.5%  5.1 MB
+  </text>
+
+  <text x="16" y="388" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">PHP</text>
+  <rect x="106" y="378" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="378" width="2" height="10"
+        rx="5" fill="#26a641"/>
+  <text x="344" y="388" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    1.0%  3.6 MB
+  </text>
+
+  <text x="16" y="412" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Rust</text>
+  <rect x="106" y="402" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="402" width="2" height="10"
+        rx="5" fill="#39d353"/>
+  <text x="344" y="412" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.9%  3.0 MB
+  </text>
+
+  <text x="16" y="436" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">SVG</text>
+  <rect x="106" y="426" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="426" width="1" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="436" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.7%  2.4 MB
+  </text>
+
+  <text x="16" y="460" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Less</text>
+  <rect x="106" y="450" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="450" width="0" height="10"
+        rx="5" fill="#0e4429"/>
+  <text x="344" y="460" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.4%  1.3 MB
+  </text>
+
+  <text x="16" y="484" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Shell</text>
+  <rect x="106" y="474" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="474" width="0" height="10"
+        rx="5" fill="#006d32"/>
+  <text x="344" y="484" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.3%  1.2 MB
+  </text>
+
+  <text x="16" y="508" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Kotlin</text>
+  <rect x="106" y="498" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="498" width="0" height="10"
+        rx="5" fill="#26a641"/>
+  <text x="344" y="508" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.3%  1.1 MB
+  </text>
+
+  <text x="16" y="532" fill="#c9d1d9" font-size="12"
+        text-anchor="start" dominant-baseline="middle">Svelte</text>
+  <rect x="106" y="522" width="238" height="10"
+        rx="5" fill="#21262d"/>
+  <rect x="106" y="522" width="0" height="10"
+        rx="5" fill="#39d353"/>
+  <text x="344" y="532" fill="#c9d1d9" font-size="10"
+        text-anchor="end" dominant-baseline="middle" opacity="0.8">
+    0.3%  1.1 MB
+  </text>
+
+</svg>
