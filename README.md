@@ -4,11 +4,23 @@
 
 </div>
 
-<table align="right">
-  <tr><td><img alt="Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="400"/></td></tr>
-  <tr><td><img alt="Top Langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=With%20Public%2BPrivate%20Repos&cache_seconds=1800" width="330"/></td></tr>
-  <tr><td><img src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" alt="CSDN" width="280"/></td></tr>
+<table>
+<tr>
+  <td width="50%" align="center">
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=Haoke98&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=1800" width="100%"/>
+  </td>
+  <td width="50%" align="center">
+    <img alt="CSDN Stats" src="https://stats.justsong.cn/api/csdn?id=weixin_43066097&theme=blue-green" width="100%"/>
+  </td>
+</tr>
 </table>
+
+<table>
+<tr>
+  <td width="33%" valign="top">
+    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Haoke98&size_weight=0.5&count_weight=0.5&langs_count=20&theme=merko&hide_border=true&layout=compact&custom_title=Top%20Languages&cache_seconds=1800" width="100%"/>
+  </td>
+  <td width="67%" valign="top">
 
 ### 👨‍💻 About Me
 
@@ -21,20 +33,26 @@ I'm a developer who believes **if you do something twice, you should automate it
 
 🔧 **What I ship**: Production-grade tools, not prototypes. My repos are built to be used by real teams with real deadlines.
 
-<br clear="right"/>
+  </td>
+</tr>
+</table>
 
 ### 🛠️ Tech Arsenal
 
 | Category | Stack |
 |----------|-------|
-| **Languages** | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) ![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white) |
-| **Backend** | ![Django](https://img.shields.io/badge/-Django-092E20?logo=django) ![Celery](https://img.shields.io/badge/-Celery-37814A?logo=celery) ![Beego](https://img.shields.io/badge/-Beego-00ADD8) |
-| **Frontend** | ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?logo=vue.js&logoColor=white) ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white) |
-| **Data & Search** | ![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?logo=elasticsearch) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql) ![Redis](https://img.shields.io/badge/-Redis-DC382D?logo=redis) |
-| **DevOps** | ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker) ![Nginx](https://img.shields.io/badge/-Nginx-009639?logo=nginx) ![GitLab CI](https://img.shields.io/badge/-GitLab_CI-FC6D26?logo=gitlab) ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black) |
-| **Security** | ![Burp](https://img.shields.io/badge/-Web_Security-FF6600) ![Network](https://img.shields.io/badge/-Network_Security-333333) ![CVE](https://img.shields.io/badge/-CVE_Research-DC382D) |
-| **AI / LLM** | ![RAG](https://img.shields.io/badge/-RAG-412991) ![Agents](https://img.shields.io/badge/-AI_Agents-6C3C9B) ![Diffusion](https://img.shields.io/badge/-Diffusion_Models-FF6F00) |
-| **Mobile** | ![Android](https://img.shields.io/badge/-Android-3DDC84?logo=android) ![iOS](https://img.shields.io/badge/-iOS-000000?logo=apple) ![Mini Programs](https://img.shields.io/badge/-WeChat_Mini-07C160?logo=wechat) |
+| **Languages** | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) ![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white) ![Java](https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Dart](https://img.shields.io/badge/-Dart-0175C2?logo=dart&logoColor=white) ![SQL](https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white) |
+| **Backend** | ![Django](https://img.shields.io/badge/-Django-092E20?logo=django) ![Flask](https://img.shields.io/badge/-Flask-000000?logo=flask) ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi) ![SpringBoot](https://img.shields.io/badge/-Spring_Boot-6DB33F?logo=springboot) ![SpringCloud](https://img.shields.io/badge/-Spring_Cloud-6DB33F?logo=spring) ![SpringMVC](https://img.shields.io/badge/-Spring_MVC-6DB33F?logo=spring) ![ThinkPHP](https://img.shields.io/badge/-ThinkPHP-FF6C37) ![Laravel](https://img.shields.io/badge/-Laravel-FF2D20?logo=laravel) |
+| **Frontend** | ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black) ![Vue2/3](https://img.shields.io/badge/-Vue_2/3-4FC08D?logo=vuedotjs&logoColor=white) ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs) ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite) ![Three.js](https://img.shields.io/badge/-Three.js-000000?logo=threedotjs) ![WebGL](https://img.shields.io/badge/-WebGL-990000?logo=webgl) |
+| **Mobile & Mini Programs** | ![Flutter](https://img.shields.io/badge/-Flutter-02569B?logo=flutter) ![Android](https://img.shields.io/badge/-Android_(Java)-3DDC84?logo=android) ![iOS](https://img.shields.io/badge/-iOS-000000?logo=apple) ![Uniapp](https://img.shields.io/badge/-Uniapp-2B9939) ![WeChat Mini](https://img.shields.io/badge/-微信小程序-07C160?logo=wechat) |
+| **Data & Big Data** | ![Elasticsearch](https://img.shields.io/badge/-ES-005571?logo=elasticsearch) ![PostgreSQL](https://img.shields.io/badge/-PG-4169E1?logo=postgresql) ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb) ![Neo4j](https://img.shields.io/badge/-Neo4j-4581C3?logo=neo4j) ![StarRocks](https://img.shields.io/badge/-StarRocks-35287B) ![Redis](https://img.shields.io/badge/-Redis-DC382D?logo=redis) |
+| | ![Kafka](https://img.shields.io/badge/-Kafka-231F20?logo=apachekafka) ![KQL](https://img.shields.io/badge/-KQL-0078D4) ![ETL](https://img.shields.io/badge/-ETL-FF6F00) ![ELT](https://img.shields.io/badge/-ELT-9C27B0) ![MinIO](https://img.shields.io/badge/-MinIO-C72E49?logo=minio) ![SeaweedFS](https://img.shields.io/badge/-SeaweedFS-5CB85C) |
+| **DevOps & Infra** | ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker) ![Nginx](https://img.shields.io/badge/-Nginx-009639?logo=nginx) ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black) ![GitLab](https://img.shields.io/badge/-GitLab-FC6D26?logo=gitlab) ![Gitea](https://img.shields.io/badge/-Gitea-609926?logo=gitea) | 
+| | ![宝塔面板](https://img.shields.io/badge/-宝塔-20A53A) ![1Panel](https://img.shields.io/badge/-1Panel-0052CC) |
+| **Task Scheduling** | ![Celery](https://img.shields.io/badge/-Celery-37814A?logo=celery) ![青龙面板](https://img.shields.io/badge/-青龙-00B4D8) |
+| **Security** | ![WAF](https://img.shields.io/badge/-WAF-FF6600) ![SafeLine](https://img.shields.io/badge/-雷池_SafeLine-00B4D8) ![SamWAF](https://img.shields.io/badge/-SamWAF-333333) ![Web Pentest](https://img.shields.io/badge/-Web渗透-CC0000) ![Server Pentest](https://img.shields.io/badge/-服务器渗透-990000) ![POC](https://img.shields.io/badge/-POC设计-FF4500) |
+| **AI / LLM** | ![Transformer](https://img.shields.io/badge/-Transformer-FF6F00) ![Agent](https://img.shields.io/badge/-AI_Agent-6C3C9B) ![Hermes](https://img.shields.io/badge/-Hermes-8A2BE2) ![OpenClaw](https://img.shields.io/badge/-OpenClaw-412991) |
+| | ![Skill Design](https://img.shields.io/badge/-Skill设计-00BCD4) ![MCP Design](https://img.shields.io/badge/-MCP设计-FF5722) |
 
 ---
 
@@ -172,8 +190,4 @@ I'm a developer who believes **if you do something twice, you should automate it
 
 <div align="center">
   <sub>⭐ <b>Star what you find useful</b> · 🔗 <b>Fork what inspires you</b> · 📩 <b>Reach out if you want to build together</b></sub>
-  <br/>
-  <a href="https://github.com/Haoke98">
-    <img src="https://komarev.com/ghpvc/?username=Haoke98&color=46ae8f&label=Profile+Views" alt="views"/>
-  </a>
 </div>
