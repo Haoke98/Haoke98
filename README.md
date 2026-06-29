@@ -93,7 +93,7 @@ I'm a developer who believes **if you do something twice, you should automate it
   <tr><td>查询语法</td>
       <td><img src="https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL"/> <img src="https://img.shields.io/badge/-KQL-0078D4" alt="KQL"/> <img src="https://img.shields.io/badge/-DSL-005571?logo=elasticsearch" alt="DSL"/></td></tr>
   <tr><td>架构和流程</td>
-      <td><img src="https://img.shields.io/badge/-ELK-005571?logo=elasticstack" alt="ELK"/> <img src="https://img.shields.io/badge/-ETL-FF6F00" alt="ETL"/> <img src="https://img.shields.io/badge/-ELT-9C27B0" alt="ELT"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-ETL-FF6F00" alt="ETL"/> <img src="https://img.shields.io/badge/-ELT-9C27B0" alt="ELT"/></td></tr>
 
   <!-- DevOps & Infra -->
   <tr><td rowspan="5"><b>DevOps &amp; Infra</b></td>
@@ -109,23 +109,29 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td><img src="https://img.shields.io/badge/-宝塔-20A53A" alt="宝塔面板"/> <img src="https://img.shields.io/badge/-1Panel-0052CC" alt="1Panel"/></td></tr>
 
   <!-- Middleware -->
-  <tr><td rowspan="3"><b>中间件</b></td>
+  <tr><td rowspan="4"><b>中间件</b></td>
       <td>消息队列</td>
       <td><img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=rabbitmq" alt="RabbitMQ"/></td></tr>
   <tr><td>缓存</td>
       <td><img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/></td></tr>
   <tr><td>注册/配置中心</td>
       <td><img src="https://img.shields.io/badge/-Nacos-1B88EE?logo=nacos" alt="Nacos"/></td></tr>
+  <tr><td>日志/监控</td>
+      <td><img src="https://img.shields.io/badge/-ELK-005571?logo=elasticstack" alt="ELK"/></td></tr>
 
   <!-- Task Scheduling -->
   <tr><td rowspan="1"><b>Task Scheduling</b></td>
       <td>—</td>
-      <td><img src="https://img.shields.io/badge/-Celery-37814A?logo=celery" alt="Celery"/> <img src="https://img.shields.io/badge/-青龙-00B4D8" alt="青龙面板"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Celery-37814A?logo=celery" alt="Celery"/> <img src="https://img.shields.io/badge/-青龙-00B4D8" alt="青龙面板"/> <img src="https://img.shields.io/badge/-Crontab-333333?logo=linux" alt="Crontab"/></td></tr>
 
   <!-- 网络工程 -->
-  <tr><td rowspan="1"><b>网络工程</b></td>
-      <td>—</td>
+  <tr><td rowspan="3"><b>网络工程</b></td>
+      <td>协议/框架</td>
       <td><img src="https://img.shields.io/badge/-Netty-4A4A55?logo=netty" alt="Netty"/> <img src="https://img.shields.io/badge/-WebSocket-0088CC" alt="WebSocket"/></td></tr>
+  <tr><td>内网穿透</td>
+      <td><img src="https://img.shields.io/badge/-FRP-0052CC" alt="FRP"/> <img src="https://img.shields.io/badge/-Lanproxy-20A53A" alt="Lanproxy"/></td></tr>
+  <tr><td>VPN / 组网</td>
+      <td><img src="https://img.shields.io/badge/-ZeroTier-FF6C37?logo=zerotier" alt="ZeroTier"/> <img src="https://img.shields.io/badge/-L2TP-0088CC" alt="L2TP"/> <img src="https://img.shields.io/badge/-Mesh组网-8A2BE2" alt="Mesh"/> <img src="https://img.shields.io/badge/-ScaledTier-412991" alt="ScaledTier"/></td></tr>
 
   <!-- Security -->
   <tr><td rowspan="3"><b>Security</b></td>
