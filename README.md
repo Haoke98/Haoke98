@@ -92,31 +92,40 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td><img src="https://img.shields.io/badge/-Spark-E25A1C?logo=apachespark" alt="Spark"/></td></tr>
   <tr><td>查询语法</td>
       <td><img src="https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL"/> <img src="https://img.shields.io/badge/-KQL-0078D4" alt="KQL"/> <img src="https://img.shields.io/badge/-DSL-005571?logo=elasticsearch" alt="DSL"/></td></tr>
-  <tr><td>Processing</td>
-      <td><img src="https://img.shields.io/badge/-ETL-FF6F00" alt="ETL"/> <img src="https://img.shields.io/badge/-ELT-9C27B0" alt="ELT"/></td></tr>
+  <tr><td>架构和流程</td>
+      <td><img src="https://img.shields.io/badge/-ELK-005571?logo=elasticstack" alt="ELK"/> <img src="https://img.shields.io/badge/-ETL-FF6F00" alt="ETL"/> <img src="https://img.shields.io/badge/-ELT-9C27B0" alt="ELT"/></td></tr>
 
   <!-- DevOps & Infra -->
   <tr><td rowspan="5"><b>DevOps &amp; Infra</b></td>
       <td>Container</td>
-      <td><img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker" alt="Docker"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker" alt="Docker"/> <img src="https://img.shields.io/badge/-Docker_Compose-2496ED?logo=docker" alt="Docker Compose"/></td></tr>
   <tr><td>CI/CD</td>
-      <td><img src="https://img.shields.io/badge/-GitLab-FC6D26?logo=gitlab" alt="GitLab"/> <img src="https://img.shields.io/badge/-Gitea-609926?logo=gitea" alt="Gitea"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-GitLab-FC6D26?logo=gitlab" alt="GitLab"/> <img src="https://img.shields.io/badge/-Gitea-609926?logo=gitea" alt="Gitea"/> <img src="https://img.shields.io/badge/-GitHub_Actions-2088FF?logo=githubactions" alt="GitHub Actions"/></td></tr>
   <tr><td>Web Server</td>
       <td><img src="https://img.shields.io/badge/-Nginx-009639?logo=nginx" alt="Nginx"/></td></tr>
   <tr><td>OS</td>
-      <td><img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux"/> <img src="https://img.shields.io/badge/-Debian-A81D33?logo=debian" alt="Debian"/> <img src="https://img.shields.io/badge/-Kali-557C94?logo=kalilinux" alt="Kali"/> <img src="https://img.shields.io/badge/-CentOS_7.9-262577?logo=centos" alt="CentOS"/> <img src="https://img.shields.io/badge/-macOS-000000?logo=apple" alt="macOS"/> <img src="https://img.shields.io/badge/-WinServer2016/2025-0078D6?logo=windows" alt="Windows Server"/></td></tr>
   <tr><td>Panel</td>
       <td><img src="https://img.shields.io/badge/-宝塔-20A53A" alt="宝塔面板"/> <img src="https://img.shields.io/badge/-1Panel-0052CC" alt="1Panel"/></td></tr>
 
   <!-- Middleware -->
-  <tr><td rowspan="1"><b>中间件</b></td>
-      <td>—</td>
-      <td><img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=rabbitmq" alt="RabbitMQ"/> <img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/> <img src="https://img.shields.io/badge/-Nacos-1B88EE?logo=nacos" alt="Nacos"/></td></tr>
+  <tr><td rowspan="3"><b>中间件</b></td>
+      <td>消息队列</td>
+      <td><img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=rabbitmq" alt="RabbitMQ"/></td></tr>
+  <tr><td>缓存</td>
+      <td><img src="https://img.shields.io/badge/-Redis-DC382D?logo=redis" alt="Redis"/></td></tr>
+  <tr><td>注册/配置中心</td>
+      <td><img src="https://img.shields.io/badge/-Nacos-1B88EE?logo=nacos" alt="Nacos"/></td></tr>
 
   <!-- Task Scheduling -->
   <tr><td rowspan="1"><b>Task Scheduling</b></td>
       <td>—</td>
       <td><img src="https://img.shields.io/badge/-Celery-37814A?logo=celery" alt="Celery"/> <img src="https://img.shields.io/badge/-青龙-00B4D8" alt="青龙面板"/></td></tr>
+
+  <!-- 网络工程 -->
+  <tr><td rowspan="1"><b>网络工程</b></td>
+      <td>—</td>
+      <td><img src="https://img.shields.io/badge/-Netty-4A4A55?logo=netty" alt="Netty"/> <img src="https://img.shields.io/badge/-WebSocket-0088CC" alt="WebSocket"/></td></tr>
 
   <!-- Security -->
   <tr><td rowspan="3"><b>Security</b></td>
@@ -132,7 +141,7 @@ I'm a developer who believes **if you do something twice, you should automate it
       <td>深度学习框架</td>
       <td><img src="https://img.shields.io/badge/-Transformer-FF6F00?logo=pytorch" alt="Transformer"/> <img src="https://img.shields.io/badge/-CNN卷积网络-EE4C2C?logo=pytorch" alt="CNN"/></td></tr>
   <tr><td>Agent 框架</td>
-      <td><img src="https://img.shields.io/badge/-Hermes_Agent-8A2BE2" alt="Hermes Agent"/> <img src="https://img.shields.io/badge/-OpenClaw-412991" alt="OpenClaw"/> <img src="https://img.shields.io/badge/-AI_Agent-6C3C9B" alt="AI Agent"/></td></tr>
+      <td><img src="https://img.shields.io/badge/-Hermes_Agent-8A2BE2" alt="Hermes Agent"/> <img src="https://img.shields.io/badge/-OpenClaw-412991" alt="OpenClaw"/></td></tr>
   <tr><td>计算机视觉</td>
       <td><img src="https://img.shields.io/badge/-OpenCV-5C3EE8?logo=opencv" alt="OpenCV"/> <img src="https://img.shields.io/badge/-YOLOv8~YOLOv26-00FFFF?logo=yolo" alt="YOLO"/></td></tr>
   <tr><td>Design</td>
