@@ -1,22 +1,42 @@
 #!/usr/bin/env python3
 """
-Generate a top-languages stats SVG for all GitHub repos (public + private).
+GitHub Language Stats — fetch, store, and visualize.
 
-Features:
-  - Fetches ALL repos (public + private) via GitHub API
-  - Smart retry: exponential backoff for transient failures (proxy jitter, 5xx, 429)
-  - Local cache: per-repo language data cached for 30 min — restart after crash
-    picks up where it left off without re-fetching
-  - Generates SVG card matching github-readme-stats style
+Default: fetch language data from GitHub API, store in local SQLite DB.
+Use flags to control SVG generation.
+
+Database schema (lang-stats.db):
+  runs            — one row per run (timestamp, repo counts, totals)
+  repo_languages  — per-repo language breakdown for each run
+  repo_metadata   — per-repo stars/forks/issues snapshot for each run
+  language_stats  — aggregated stats per run (JSON)
+
+Old databases are upgraded in place: columns added by newer versions are
+appended with ALTER TABLE (after a timestamped .bak copy), so earlier runs
+are never dropped. Every run is a new row — history is append-only.
 
 Usage:
+    # 1. Fetch data + store to DB only (default)
     python3 generate-lang-stats.py --token ***
-    python3 generate-lang-stats.py --token *** -t tokyonight -n 15
+
+    # 2. Fetch + store + generate SVG
+    python3 generate-lang-stats.py --token *** --svg
+
+    # 3. Generate SVG from latest DB data (no API calls)
+    python3 generate-lang-stats.py --svg-only
+
+    # 4. --svg-only with theme
+    python3 generate-lang-stats.py --svg-only -t tokyonight -n 15
+
+    # 5. Keep repos whose language call failed by reusing the previous
+    #    run's numbers instead of dropping them from the new totals
+    python3 generate-lang-stats.py --token *** --reuse-missing
 """
 
 import argparse
 import json
 import os
+import sqlite3
 import sys
 import time
 from collections import defaultdict
@@ -25,16 +45,20 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 from xml.sax.saxutils import escape as xml_escape
 
+# ── Paths ─────────────────────────────────────────────────────────
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(SCRIPT_DIR, "lang-stats.db")
+CACHE_PATH = os.path.join(SCRIPT_DIR, "lang-cache.json")
+SVG_PATH = os.path.join(SCRIPT_DIR, "..", "lang-stats.svg")
+
 # ── Config ────────────────────────────────────────────────────────
 DEFAULT_USERNAME = "Haoke98"
-DEFAULT_OUTPUT = "lang-stats.svg"
 DEFAULT_THEME = "merko"
-CACHE_FILE = "lang-cache.json"          # per-repo language cache
-CACHE_TTL_MINUTES = 30                   # how long cache is considered fresh
-MAX_RETRIES = 3                          # retries per request
-BASE_BACKOFF = 2                         # seconds, doubles each retry
+SCRIPT_VERSION = "3.1"
+CACHE_TTL_MINUTES = 30
+MAX_RETRIES = 3
+BASE_BACKOFF = 2
 
-# Theme palettes
 THEMES = {
     "dark": {
         "bg": "#0d1117", "border": "#30363d", "title": "#58a6ff",
@@ -42,15 +66,12 @@ THEMES = {
         "bar_colors": [
             "#f78166", "#56d364", "#e3b341", "#6e7681", "#79c0ff",
             "#a5d6ff", "#ffa198", "#aff5b4", "#ff7b72", "#d2a8ff",
-            "#ffdfb6", "#d2a8ff", "#f0f6fc", "#8b949e", "#7ee787",
-            "#a5d6ff", "#f2cc60", "#e5534b", "#db61a2", "#1f6feb",
         ],
     },
     "merko": {
         "bg": "#0d1117", "border": "#30363d", "title": "#58a6ff",
         "text": "#c9d1d9", "bar_bg": "#21262d",
         "bar_colors": [
-            "#006d32", "#0e4429", "#006d32", "#26a641", "#39d353",
             "#006d32", "#0e4429", "#006d32", "#26a641", "#39d353",
         ],
     },
@@ -59,9 +80,6 @@ THEMES = {
         "text": "#38bdae", "bar_bg": "#1f2937",
         "bar_colors": [
             "#bf91f3", "#3fb950", "#ff966c", "#0077b6", "#00b4d8",
-            "#90e0ef", "#caf0f8", "#f72585", "#7209b7", "#4361ee",
-            "#4cc9f0", "#4895ef", "#560bad", "#f7a1c4", "#b5179e",
-            "#3a0ca3", "#ffd166", "#ef476f", "#118ab2", "#06d6a0",
         ],
     },
     "onedark": {
@@ -69,7 +87,6 @@ THEMES = {
         "text": "#abb2bf", "bar_bg": "#3b4048",
         "bar_colors": [
             "#e5c07b", "#98c379", "#56b6c2", "#c678dd", "#e06c75",
-            "#61afef", "#e5c07b", "#98c379", "#56b6c2", "#c678dd",
         ],
     },
     "nord": {
@@ -77,249 +94,498 @@ THEMES = {
         "text": "#d8dee9", "bar_bg": "#4c566a",
         "bar_colors": [
             "#bf616a", "#a3be8c", "#ebcb8b", "#81a1c1", "#b48ead",
-            "#88c0d0", "#5e81ac", "#d08770", "#8fbcbb", "#bf616a",
         ],
     },
 }
 
+# ── Database ──────────────────────────────────────────────────────
+
+SCHEMA_SQL = """
+        CREATE TABLE IF NOT EXISTS runs (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            username    TEXT NOT NULL,
+            timestamp   TEXT NOT NULL,
+            total_repos INTEGER,
+            public_repos INTEGER,
+            private_repos INTEGER,
+            total_bytes INTEGER,
+            language_count INTEGER,
+            total_stars  INTEGER DEFAULT 0,
+            total_forks  INTEGER DEFAULT 0,
+            total_issues INTEGER DEFAULT 0
+        );
+
+        CREATE TABLE IF NOT EXISTS repo_languages (
+            id        INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id    INTEGER NOT NULL REFERENCES runs(id),
+            repo_name TEXT NOT NULL,
+            language  TEXT NOT NULL,
+            bytes     INTEGER NOT NULL,
+            UNIQUE(run_id, repo_name, language)
+        );
+
+        CREATE TABLE IF NOT EXISTS repo_metadata (
+            id         INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id     INTEGER NOT NULL REFERENCES runs(id),
+            repo_name  TEXT NOT NULL,
+            stars      INTEGER DEFAULT 0,
+            forks      INTEGER DEFAULT 0,
+            open_issues INTEGER DEFAULT 0,
+            watchers   INTEGER DEFAULT 0,
+            size_kb    INTEGER DEFAULT 0,
+            is_fork    INTEGER DEFAULT 0,
+            is_private INTEGER DEFAULT 0,
+            language   TEXT,
+            default_branch TEXT,
+            created_at TEXT,
+            updated_at TEXT,
+            pushed_at  TEXT,
+            UNIQUE(run_id, repo_name)
+        );
+
+        CREATE TABLE IF NOT EXISTS language_stats (
+            run_id     INTEGER PRIMARY KEY REFERENCES runs(id),
+            stats_json TEXT NOT NULL
+        );
+"""
+
+# Columns introduced after a table was first released. `CREATE TABLE IF NOT
+# EXISTS` silently ignores existing tables, so an old DB would otherwise blow
+# up on the first INSERT that mentions a newer column. Additive only, and the
+# DEFAULT fills the rows already stored — no run is ever rewritten or dropped.
+SCHEMA_UPGRADES = {
+    "runs": {
+        "total_stars": "INTEGER DEFAULT 0",
+        "total_forks": "INTEGER DEFAULT 0",
+        "total_issues": "INTEGER DEFAULT 0",
+    },
+}
+
+
+def _table_columns(conn, table) -> set:
+    return {row[1] for row in conn.execute(f'PRAGMA table_info("{table}")')}
+
+
+def _pending_upgrades(conn) -> list:
+    """Return [(table, column, sql_type)] missing from an existing DB."""
+    pending = []
+    for table, columns in SCHEMA_UPGRADES.items():
+        existing = _table_columns(conn, table)
+        if not existing:
+            continue  # table missing entirely — SCHEMA_SQL just created it
+        for column, decl in columns.items():
+            if column not in existing:
+                pending.append((table, column, decl))
+    return pending
+
+
+def backup_db(conn, reason="migration") -> str:
+    """WAL-safe snapshot next to the DB; returns the backup path."""
+    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+    dst = f"{DB_PATH}.bak-{reason}-{stamp}"
+    with sqlite3.connect(dst) as bck:
+        conn.backup(bck)
+    return dst
+
+
+def backfill_run_totals(conn) -> int:
+    """Recover star/fork/issue totals from repo_metadata where it exists.
+
+    Only touches runs whose totals are still 0 and that actually have metadata
+    rows, so upgraded databases show real numbers for their old runs.
+    """
+    rows = conn.execute(
+        "SELECT r.id, SUM(m.stars), SUM(m.forks), SUM(m.open_issues) "
+        "FROM runs r JOIN repo_metadata m ON m.run_id = r.id "
+        "WHERE COALESCE(r.total_stars, 0) = 0 "
+        "  AND COALESCE(r.total_forks, 0) = 0 "
+        "GROUP BY r.id HAVING COUNT(m.id) > 0"
+    ).fetchall()
+    for run_id, stars, forks, issues in rows:
+        conn.execute(
+            "UPDATE runs SET total_stars=?, total_forks=?, total_issues=? WHERE id=?",
+            (stars or 0, forks or 0, issues or 0, run_id),
+        )
+    if rows:
+        conn.commit()
+    return len(rows)
+
+
+def migrate_db(conn, pre_existing: bool) -> list:
+    """Add missing columns to an existing DB without losing a single row."""
+    pending = _pending_upgrades(conn)
+    if not pending:
+        return []
+    if pre_existing:
+        print(f"🗄️  Backup before upgrade: {backup_db(conn)}", file=sys.stderr)
+    for table, column, decl in pending:
+        conn.execute(f'ALTER TABLE "{table}" ADD COLUMN {column} {decl}')
+    conn.commit()
+    print("🔧 Schema upgraded in place (history kept): "
+          + ", ".join(f"{t}.{c}" for t, c, _ in pending), file=sys.stderr)
+    recovered = backfill_run_totals(conn)
+    if recovered:
+        print(f"   ↺ Recovered star/fork/issue totals for {recovered} old run(s) "
+              f"from repo_metadata", file=sys.stderr)
+    return pending
+
+
+def init_db() -> sqlite3.Connection:
+    """Open the DB, creating or upgrading the schema as needed."""
+    pre_existing = os.path.exists(DB_PATH) and os.path.getsize(DB_PATH) > 0
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA foreign_keys=ON")
+    conn.executescript(SCHEMA_SQL)
+    migrate_db(conn, pre_existing)
+    return conn
+
+
+def save_run(conn, username, total_repos, public_repos, private_repos,
+             total_bytes, lang_count, total_stars=0, total_forks=0, total_issues=0):
+    """Insert a new run and return its ID."""
+    ts = datetime.now(timezone.utc).isoformat()
+    cur = conn.execute(
+        "INSERT INTO runs (username, timestamp, total_repos, public_repos, "
+        "private_repos, total_bytes, language_count, total_stars, total_forks, total_issues) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?)",
+        (username, ts, total_repos, public_repos, private_repos,
+         total_bytes, lang_count, total_stars, total_forks, total_issues),
+    )
+    conn.commit()
+    return cur.lastrowid
+
+
+def save_repo_languages(conn, run_id, repo_name, langs):
+    """Insert language breakdown for one repo."""
+    rows = [(run_id, repo_name, lang, b) for lang, b in langs.items()]
+    conn.executemany(
+        "INSERT OR IGNORE INTO repo_languages (run_id, repo_name, language, bytes) "
+        "VALUES (?,?,?,?)", rows,
+    )
+    conn.commit()
+
+
+def save_repo_metadata(conn, run_id, repo):
+    """Insert metadata (stars, forks, issues, etc.) for one repo."""
+    conn.execute(
+        "INSERT OR IGNORE INTO repo_metadata "
+        "(run_id, repo_name, stars, forks, open_issues, watchers, size_kb, "
+        "is_fork, is_private, language, default_branch, created_at, updated_at, pushed_at) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        (
+            run_id,
+            repo.get("name", ""),
+            repo.get("stargazers_count", 0) or 0,
+            repo.get("forks_count", 0) or 0,
+            repo.get("open_issues_count", 0) or 0,
+            repo.get("watchers_count", 0) or 0,
+            repo.get("size", 0) or 0,
+            1 if repo.get("fork") else 0,
+            1 if repo.get("private") else 0,
+            repo.get("language", ""),
+            repo.get("default_branch", ""),
+            repo.get("created_at", ""),
+            repo.get("updated_at", ""),
+            repo.get("pushed_at", ""),
+        ),
+    )
+    conn.commit()
+
+
+def save_language_stats(conn, run_id, languages):
+    """Store aggregated language stats as JSON."""
+    stats = {lang: b for lang, b in languages}
+    conn.execute(
+        "INSERT OR REPLACE INTO language_stats (run_id, stats_json) VALUES (?,?)",
+        (run_id, json.dumps(stats, ensure_ascii=False)),
+    )
+    conn.commit()
+
+
+def get_latest_stats(conn, username):
+    """Return the most recent aggregated stats for a user."""
+    row = conn.execute(
+        "SELECT ls.stats_json, r.timestamp FROM language_stats ls "
+        "JOIN runs r ON r.id = ls.run_id "
+        "WHERE r.username = ? ORDER BY r.id DESC LIMIT 1",
+        (username,),
+    ).fetchone()
+    if row:
+        stats = json.loads(row[0])
+        sorted_langs = sorted(stats.items(), key=lambda x: x[1], reverse=True)
+        return sorted_langs, row[1]
+    return None, None
+
+
+def get_recent_runs(conn, username, limit=5):
+    """Return recent runs summary."""
+    return conn.execute(
+        "SELECT id, timestamp, total_repos, public_repos, private_repos, "
+        "total_bytes, language_count, total_stars, total_forks, total_issues "
+        "FROM runs WHERE username = ? ORDER BY id DESC LIMIT ?",
+        (username, limit),
+    ).fetchall()
+
+
 # ── Cache helpers ─────────────────────────────────────────────────
 
-def load_cache(path: str) -> dict:
-    """Load per-repo language cache from JSON file."""
-    if os.path.exists(path):
+def load_cache():
+    if os.path.exists(CACHE_PATH):
         try:
-            with open(path, "r") as f:
+            with open(CACHE_PATH) as f:
                 return json.load(f)
         except (json.JSONDecodeError, OSError):
-            print("⚠️  Cache file corrupt, starting fresh.", file=sys.stderr)
+            print("⚠️  Cache corrupt, starting fresh.", file=sys.stderr)
     return {}
 
 
-def save_cache(path: str, cache: dict):
-    """Save per-repo language cache to JSON file."""
+def save_cache(cache):
     try:
-        with open(path, "w") as f:
+        with open(CACHE_PATH, "w") as f:
             json.dump(cache, f, indent=2, ensure_ascii=False)
     except OSError as e:
         print(f"⚠️  Failed to save cache: {e}", file=sys.stderr)
 
 
-def cache_is_fresh(entry: dict, ttl_minutes: int = CACHE_TTL_MINUTES) -> bool:
-    """Check if a cached entry is still within the TTL window."""
+def cache_is_fresh(entry, ttl_minutes=CACHE_TTL_MINUTES):
     ts = entry.get("_ts", "")
     try:
-        cached_time = datetime.fromisoformat(ts)
-        age = datetime.now(timezone.utc) - cached_time
+        age = datetime.now(timezone.utc) - datetime.fromisoformat(ts)
         return age < timedelta(minutes=ttl_minutes)
     except (ValueError, TypeError):
         return False
 
 
-def cache_get(cache: dict, repo_name: str, ttl_minutes: int = CACHE_TTL_MINUTES) -> dict | None:
-    """Return cached language data if fresh, otherwise None."""
+def cache_get(cache, repo_name, ttl_minutes=CACHE_TTL_MINUTES):
     entry = cache.get(repo_name)
     if entry and cache_is_fresh(entry, ttl_minutes):
         return {k: v for k, v in entry.items() if k != "_ts"}
     return None
 
 
-def cache_put(cache: dict, repo_name: str, data: dict):
-    """Store language data in cache with timestamp."""
+def cache_put(cache, repo_name, data):
     cache[repo_name] = {"_ts": datetime.now(timezone.utc).isoformat(), **data}
 
 
 # ── API client ────────────────────────────────────────────────────
 
-def api_get(url: str, token: str, log_prefix: str = "") -> dict:
-    """
-    Make an authenticated GitHub API request with exponential-backoff retry.
-    Handles transient failures (proxy jitter, 5xx, 429, DNS failures, etc.)
-    gracefully — retries up to MAX_RETRIES then returns empty on failure.
-    """
+def api_get(url, token, log_prefix=""):
     req = Request(url)
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("User-Agent", "lang-stats-generator/2.0")
+    req.add_header("User-Agent", f"lang-stats-generator/{SCRIPT_VERSION}")
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             with urlopen(req, timeout=60) as resp:
                 return json.loads(resp.read().decode())
-
         except HTTPError as e:
-            status, msg = e.code, e.reason
-
-            # Auth errors — don't retry
-            if status == 401:
-                print(f"  ❌ {log_prefix} 401 Unauthorized — token invalid or expired.", file=sys.stderr)
+            if e.code == 401:
+                print(f"  ❌ {log_prefix} 401 Unauthorized.", file=sys.stderr)
                 return {}
-            if status == 403 and "rate limit" in str(e.headers).lower():
-                # Rate limited — wait longer
-                wait = 60
-                print(f"  ⏳ {log_prefix} 403 Rate limited, waiting {wait}s...", file=sys.stderr)
-                time.sleep(wait)
-                continue
-
-            # Not found — don't retry (empty repo?)
-            if status == 404:
-                print(f"  ⚠️  {log_prefix} 404 Not Found — skipping.", file=sys.stderr)
+            if e.code == 404:
                 return {}
-
-            # Transient: 429, 451, 5xx, or unknown — retry
-            if status == 429:
-                print(f"  ⏳ {log_prefix} 429 Too Many Requests.", file=sys.stderr)
-            elif status == 451:
-                print(f"  ⚠️  {log_prefix} 451 Unavailable (regional/proxy block).", file=sys.stderr)
-            elif 500 <= status < 600:
-                print(f"  ⚠️  {log_prefix} {status} Server Error.", file=sys.stderr)
-            else:
-                print(f"  ⚠️  {log_prefix} HTTP {status}: {msg}.", file=sys.stderr)
-
+            if e.code == 403 and "rate limit" in str(e.headers).lower():
+                time.sleep(60); continue
             if attempt == MAX_RETRIES:
-                print(f"  ❌ {log_prefix} Failed after {MAX_RETRIES} attempts — skipping.", file=sys.stderr)
+                print(f"  ❌ {log_prefix} HTTP {e.code} — skipped.", file=sys.stderr)
                 return {}
-            wait = BASE_BACKOFF ** attempt
-            print(f"  🔄 {log_prefix} Retry {attempt}/{MAX_RETRIES} in {wait}s...", file=sys.stderr)
-            time.sleep(wait)
-
         except URLError as e:
-            reason = str(e.reason) if hasattr(e, 'reason') else str(e)
-            print(f"  ⚠️  {log_prefix} Network error: {reason}.", file=sys.stderr)
             if attempt == MAX_RETRIES:
-                print(f"  ❌ {log_prefix} Failed after {MAX_RETRIES} attempts — skipping.", file=sys.stderr)
+                print(f"  ❌ {log_prefix} Network error — skipped.", file=sys.stderr)
                 return {}
-            wait = BASE_BACKOFF ** attempt
-            print(f"  🔄 {log_prefix} Retry {attempt}/{MAX_RETRIES} in {wait}s...", file=sys.stderr)
-            time.sleep(wait)
-
-        except Exception as e:
-            print(f"  ⚠️  {log_prefix} Unexpected error: {e}.", file=sys.stderr)
+        except Exception:
             if attempt == MAX_RETRIES:
-                print(f"  ❌ {log_prefix} Failed after {MAX_RETRIES} attempts — skipping.", file=sys.stderr)
+                print(f"  ❌ {log_prefix} Error — skipped.", file=sys.stderr)
                 return {}
-            wait = BASE_BACKOFF ** attempt
-            time.sleep(wait)
-
+        wait = BASE_BACKOFF ** attempt
+        time.sleep(wait)
     return {}
 
 
 # ── Business logic ────────────────────────────────────────────────
 
-def fetch_all_repos(username: str, token: str) -> list:
-    """Fetch all repos (public + private) with pagination and retry."""
+def fetch_all_repos(username, token):
     all_repos = []
     page = 1
     while True:
         url = f"https://api.github.com/user/repos?type=all&per_page=100&page={page}&sort=updated"
         print(f"📡 Fetching repo list — page {page}...", file=sys.stderr)
-        repos = api_get(url, token, log_prefix=f"repos-p{page}")
-
+        repos = api_get(url, token, f"repos-p{page}")
         if not repos:
             break
-
         all_repos.extend(repos)
         if len(repos) < 100:
             break
         page += 1
-        time.sleep(0.3)  # gentle pacing
-
+        time.sleep(0.3)
     own = [r for r in all_repos if r.get("owner", {}).get("login") == username]
-    print(f"✅ Found {len(own)} repos total (public + private)", file=sys.stderr)
+    print(f"✅ Found {len(own)} repos", file=sys.stderr)
     return own
 
 
-def fetch_repo_languages(owner: str, repo: str, token: str) -> dict:
-    """Fetch language breakdown for a single repo."""
-    url = f"https://api.github.com/repos/{owner}/{repo}/languages"
-    return api_get(url, token, log_prefix=f"{repo}")
+def fetch_repo_languages(owner, repo, token):
+    return api_get(f"https://api.github.com/repos/{owner}/{repo}/languages",
+                   token, repo)
 
 
-def aggregate_languages(repos: list, token: str, cache: dict, cache_path: str,
-                        ttl_minutes: int = CACHE_TTL_MINUTES) -> list:
+def latest_repo_languages(conn, repo_name, before_run_id):
+    """Most recent stored language breakdown for a repo, older than run_id.
+
+    Used with --reuse-missing so a transient API failure does not silently
+    shrink this run's totals for repos that were measured before.
     """
-    Walk all repos, fetch language data (with cache), and aggregate.
-    Returns sorted list of (language, total_bytes).
-    """
+    row = conn.execute(
+        "SELECT run_id FROM repo_languages WHERE repo_name = ? AND run_id < ? "
+        "ORDER BY run_id DESC LIMIT 1",
+        (repo_name, before_run_id),
+    ).fetchone()
+    if not row:
+        return None, None
+    langs = dict(conn.execute(
+        "SELECT language, bytes FROM repo_languages WHERE run_id = ? AND repo_name = ?",
+        (row[0], repo_name),
+    ).fetchall())
+    return (langs or None), row[0]
+
+
+def collect_and_store(username, token, cache, no_cache, reuse_missing=False):
+    """Fetch all data, store in DB and cache. Returns (run_id, languages_list, totals)."""
+    conn = init_db()
+    ttl = CACHE_TTL_MINUTES if not no_cache else 0
+
+    # 1. Fetch repos
+    repos = fetch_all_repos(username, token)
+    if not repos:
+        print("❌ No repos found.", file=sys.stderr)
+        conn.close()
+        sys.exit(1)
+
+    public = sum(1 for r in repos if not r.get("private", False))
+    private = sum(1 for r in repos if r.get("private", False))
+    print(f"   → {public} public, {private} private\n", file=sys.stderr)
+
+    # 2. Walk repos
     totals = defaultdict(int)
-    total = len(repos)
-    skipped = 0
+    total_repos = len(repos)
     cached_hits = 0
+    skipped = 0
+    reused = 0
+    total_stars = 0
+    total_forks = 0
+    total_open_issues = 0
+
+    # Save run first (we'll update counts later)
+    run_id = save_run(conn, username, total_repos, public, private, 0, 0)
 
     for i, repo in enumerate(repos):
         name = repo["name"]
         owner = repo["owner"]["login"]
 
-        # Check cache first
-        cached = cache_get(cache, name, ttl_minutes)
+        # Save metadata (stars/forks/issues/etc.) for EVERY repo
+        save_repo_metadata(conn, run_id, repo)
+        total_stars += repo.get("stargazers_count", 0) or 0
+        total_forks += repo.get("forks_count", 0) or 0
+        total_open_issues += repo.get("open_issues_count", 0) or 0
+
+        # Check cache
+        cached = cache_get(cache, name, ttl) if ttl > 0 else None
         if cached:
-            print(f"📊 [{i + 1}/{total}] {name} ← cache hit (+{len(cached)} langs)", file=sys.stderr)
+            print(f"📊 [{i+1}/{total_repos}] {name} ← cache hit (+{len(cached)} langs)", file=sys.stderr)
+            save_repo_languages(conn, run_id, name, cached)
             for lang, b in cached.items():
                 totals[lang] += b
             cached_hits += 1
             continue
 
         # Fetch from API
-        print(f"📊 [{i + 1}/{total}] {name}...", file=sys.stderr)
+        print(f"📊 [{i+1}/{total_repos}] {name}...", file=sys.stderr)
         langs = fetch_repo_languages(owner, name, token)
 
         if not langs:
-            # Could be an empty response or an error — don't cache
-            print(f"  ⚠️  {name} returned no data — skipping (not cached)", file=sys.stderr)
+            if reuse_missing:
+                prev, prev_run = latest_repo_languages(conn, name, run_id)
+                if prev:
+                    print(f"↩ [{i+1}/{total_repos}] {name} — API returned nothing, "
+                          f"reusing run {prev_run} ({len(prev)} langs)", file=sys.stderr)
+                    save_repo_languages(conn, run_id, name, prev)
+                    for lang, b in prev.items():
+                        totals[lang] += b
+                    reused += 1
+                    continue
             skipped += 1
         else:
-            # Cache the result
-            cache_put(cache, name, langs)
-            save_cache(cache_path, cache)
-
+            if ttl > 0:
+                cache_put(cache, name, langs)
+                save_cache(cache)
+            save_repo_languages(conn, run_id, name, langs)
             for lang, b in langs.items():
                 totals[lang] += b
 
-        # Pacing to avoid secondary rate limits
         if (i + 1) % 5 == 0:
             time.sleep(0.5)
 
-    print(f"\n📊 Summary:", file=sys.stderr)
-    print(f"   Processed: {total - skipped}/{total} repos", file=sys.stderr)
-    print(f"   Cache hits: {cached_hits}", file=sys.stderr)
-    print(f"   Skipped (errors): {skipped}", file=sys.stderr)
-
     sorted_langs = sorted(totals.items(), key=lambda x: x[1], reverse=True)
-    return sorted_langs
+    total_bytes = sum(b for _, b in sorted_langs)
+
+    # Update run with totals
+    conn.execute(
+        "UPDATE runs SET total_bytes=?, language_count=?, "
+        "total_stars=?, total_forks=?, total_issues=? WHERE id=?",
+        (total_bytes, len(sorted_langs), total_stars, total_forks, total_open_issues, run_id),
+    )
+    save_language_stats(conn, run_id, sorted_langs)
+    conn.commit()
+
+    print(f"\n📊 Summary:", file=sys.stderr)
+    print(f"   Repos processed: {total_repos - skipped}/{total_repos}", file=sys.stderr)
+    print(f"   Cache hits:      {cached_hits}", file=sys.stderr)
+    if reused:
+        print(f"   Reused history:  {reused}", file=sys.stderr)
+    print(f"   Skipped:         {skipped}", file=sys.stderr)
+    print(f"   ⭐ Total stars:  {total_stars:,}", file=sys.stderr)
+    print(f"   🍴 Total forks:  {total_forks:,}", file=sys.stderr)
+    print(f"   📝 Open issues:  {total_open_issues:,}", file=sys.stderr)
+    print(f"   Languages:       {len(sorted_langs)}", file=sys.stderr)
+    print(f"   Total code:      {format_bytes(total_bytes)}", file=sys.stderr)
+    print(f"   Run ID:          {run_id}", file=sys.stderr)
+
+    # Print top 10
+    print(f"\n📊 Top languages:", file=sys.stderr)
+    for lang, b in sorted_langs[:10]:
+        pct = b / total_bytes * 100 if total_bytes > 0 else 0
+        print(f"   {lang:20s} {format_bytes(b):>10s}  ({pct:5.1f}%)", file=sys.stderr)
+
+    conn.close()
+    return run_id, sorted_langs, total_bytes
 
 
-def format_bytes(b: int) -> str:
-    """Human-readable byte count."""
+# ── SVG generation ────────────────────────────────────────────────
+
+def format_bytes(b):
     if b >= 1_000_000:
-        return f"{b / 1_000_000:.1f} MB"
+        return f"{b/1_000_000:.1f} MB"
     elif b >= 1_000:
-        return f"{b / 1_000:.0f} KB"
-    else:
-        return f"{b} B"
+        return f"{b/1_000:.0f} KB"
+    return f"{b} B"
 
 
-def generate_svg(languages: list, username: str, theme_name: str,
-                 output_path: str, top_n: int = 20):
-    """Generate the top-languages SVG card."""
+def generate_svg(languages, username, theme_name, output_path, top_n=20):
     theme = THEMES.get(theme_name, THEMES["merko"])
-
     card_width = 360
     row_height = 24
     header_height = 60
     padding_x = 16
     padding_y = 12
-
     content_rows = min(len(languages), top_n)
     card_height = header_height + content_rows * row_height + padding_y * 2
     total_bytes = sum(b for _, b in languages[:top_n])
 
-    bar_x = padding_x
-    bar_width = card_width - padding_x * 2
-    bar_height = 10
-    max_bar_text_width = 80
-    bar_usable_width = bar_width - max_bar_text_width - 10
-    text_x = bar_x + max_bar_text_width + 10
+    bar_usable_width = card_width - padding_x * 2 - 90
+    text_x = padding_x + 80
 
-    svg_parts = [f'''<?xml version="1.0" encoding="UTF-8"?>
+    parts = [f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg width="{card_width}" height="{card_height}" viewBox="0 0 {card_width} {card_height}"
      xmlns="http://www.w3.org/2000/svg">
   <style>
@@ -328,7 +594,6 @@ def generate_svg(languages: list, username: str, theme_name: str,
   <rect x="0" y="0" width="{card_width}" height="{card_height}" rx="6" fill="{theme['bg']}"/>
   <rect x="0" y="0" width="{card_width}" height="{card_height}" rx="6"
         fill="none" stroke="{theme['border']}" stroke-width="1"/>
-
   <text x="{padding_x}" y="30" fill="{theme['title']}" font-size="14" font-weight="700">
     Top Languages
   </text>
@@ -337,55 +602,90 @@ def generate_svg(languages: list, username: str, theme_name: str,
   </text>
 ''']
 
-    for idx, (lang, bytes_count) in enumerate(languages[:top_n]):
+    for idx, (lang, b) in enumerate(languages[:top_n]):
         y = header_height + idx * row_height
-        pct = (bytes_count / total_bytes * 100) if total_bytes > 0 else 0
-        bar_color = theme["bar_colors"][idx % len(theme["bar_colors"])]
-        bar_fill_width = max(0, int(bar_usable_width * (pct / 100)))
+        pct = b / total_bytes * 100 if total_bytes > 0 else 0
+        color = theme["bar_colors"][idx % len(theme["bar_colors"])]
+        fill_w = max(0, int(bar_usable_width * (pct / 100)))
 
-        svg_parts.append(f'''
-  <text x="{bar_x}" y="{y + 16}" fill="{theme['text']}" font-size="12"
-        text-anchor="start" dominant-baseline="middle">{xml_escape(lang)}</text>
-  <rect x="{text_x}" y="{y + 6}" width="{bar_usable_width}" height="{bar_height}"
-        rx="5" fill="{theme['bar_bg']}"/>
-  <rect x="{text_x}" y="{y + 6}" width="{bar_fill_width}" height="{bar_height}"
-        rx="5" fill="{bar_color}"/>
-  <text x="{card_width - padding_x}" y="{y + 16}" fill="{theme['text']}" font-size="10"
+        parts.append(f'''
+  <text x="{padding_x}" y="{y+16}" fill="{theme['text']}" font-size="12"
+        dominant-baseline="middle">{xml_escape(lang)}</text>
+  <rect x="{text_x}" y="{y+6}" width="{bar_usable_width}" height="10" rx="5"
+        fill="{theme['bar_bg']}"/>
+  <rect x="{text_x}" y="{y+6}" width="{fill_w}" height="10" rx="5" fill="{color}"/>
+  <text x="{card_width-padding_x}" y="{y+16}" fill="{theme['text']}" font-size="10"
         text-anchor="end" dominant-baseline="middle" opacity="0.8">
-    {pct:.1f}%  {format_bytes(bytes_count)}
+    {pct:.1f}%  {format_bytes(b)}
   </text>
 ''')
 
-    svg_parts.append('\n</svg>')
-    svg_content = "".join(svg_parts)
+    parts.append('\n</svg>')
 
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
+        f.write("".join(parts))
 
-    print(f"\n✅ SVG saved to: {output_path}", file=sys.stderr)
-    print(f"   Languages: {content_rows} shown of {len(languages)} total", file=sys.stderr)
-    print(f"   Total code: {format_bytes(total_bytes)}", file=sys.stderr)
+    print(f"✅ SVG saved to: {output_path}", file=sys.stderr)
+    print(f"   {content_rows} languages shown, {format_bytes(total_bytes)} total", file=sys.stderr)
 
 
 # ── Main ──────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate GitHub top-languages stats SVG (public + private repos)"
+        description="GitHub language stats — fetch, store, visualize"
     )
     parser.add_argument("-t", "--token", help="GitHub token (or GITHUB_TOKEN env var)")
     parser.add_argument("-u", "--username", default=DEFAULT_USERNAME)
-    parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT)
     parser.add_argument("-T", "--theme", default=DEFAULT_THEME, choices=list(THEMES.keys()))
     parser.add_argument("-n", "--top", type=int, default=20)
-    parser.add_argument("--cache-ttl", type=int, default=CACHE_TTL_MINUTES,
-                        help=f"Cache TTL in minutes (default: {CACHE_TTL_MINUTES})")
-    parser.add_argument("--no-cache", action="store_true",
-                        help="Ignore cache and re-fetch everything")
-    parser.add_argument("--save-json", help="Save raw data as JSON")
+    parser.add_argument("-o", "--output", default=SVG_PATH, help="SVG output path")
+    parser.add_argument("--no-cache", action="store_true", help="Skip API cache")
+    parser.add_argument("--reuse-missing", action="store_true",
+                        help="If a repo's language call returns nothing, reuse its "
+                             "data from the previous run instead of dropping it")
+    parser.add_argument("--svg", action="store_true",
+                        help="Fetch data AND generate SVG")
+    parser.add_argument("--svg-only", action="store_true",
+                        help="Generate SVG from latest DB data (no API calls)")
+    parser.add_argument("--history", action="store_true",
+                        help="Show recent run history")
+    parser.add_argument("--save-json", help="Also save latest stats as JSON")
+
     args = parser.parse_args()
 
-    # Token
+    # ── History mode ──
+    if args.history:
+        conn = init_db()
+        runs = get_recent_runs(conn, args.username)
+        conn.close()
+        if not runs:
+            print("No runs found.", file=sys.stderr)
+            return
+        print(f"\n📋 Recent runs for {args.username}:\n")
+        print(f"{'ID':<6} {'Timestamp':<26} {'Repos':<7} {'⭐Stars':<8} {'🍴Forks':<8} {'📝Issues':<8} {'Langs':<6} {'Total Code'}")
+        print("-" * 100)
+        for r in runs:
+            rid, ts, total, pub, priv, tb, lc, stars, forks, issues = r
+            print(f"{rid:<6} {ts:<26} {total:<7} {stars or 0:<8,} {forks or 0:<8,} {issues or 0:<8,} {lc:<6} {format_bytes(tb or 0)}")
+        return
+
+    # ── SVG-only mode (no API) ──
+    if args.svg_only:
+        conn = init_db()
+        langs, ts = get_latest_stats(conn, args.username)
+        conn.close()
+        if not langs:
+            print("❌ No data in DB. Run with --token first.", file=sys.stderr)
+            sys.exit(1)
+        print(f"📅 Using stats from: {ts}", file=sys.stderr)
+        generate_svg(langs, args.username, args.theme, args.output, args.top)
+        if args.save_json:
+            with open(args.save_json, "w") as f:
+                json.dump({l: b for l, b in langs}, f, indent=2)
+        return
+
+    # ── Fetch mode (with or without SVG) ──
     token = args.token or os.environ.get("GITHUB_TOKEN")
     if not token:
         print("❌ GitHub token required.", file=sys.stderr)
@@ -393,48 +693,25 @@ def main():
         sys.exit(1)
 
     print(f"🔍 GitHub user:  {args.username}", file=sys.stderr)
+    print(f"📁 DB:           {DB_PATH}", file=sys.stderr)
     print(f"🎨 Theme:        {args.theme}", file=sys.stderr)
-    print(f"📁 Output:       {args.output}", file=sys.stderr)
-    print(f"💾 Cache TTL:    {args.cache_ttl} min", file=sys.stderr)
-    print(f"🔄 Retries:      {MAX_RETRIES} per request", file=sys.stderr)
+    if args.svg:
+        print(f"🖼️  SVG output:   {args.output}", file=sys.stderr)
     print("", file=sys.stderr)
 
-    # Load cache
-    cache_path = os.path.join(os.path.dirname(__file__) or ".", CACHE_FILE)
-    cache = {} if args.no_cache else load_cache(cache_path)
-    if not args.no_cache and cache:
-        print(f"📦 Loaded cache: {len(cache)} entries\n", file=sys.stderr)
+    cache = load_cache()
+    run_id, languages, total_bytes = collect_and_store(
+        args.username, token, cache, args.no_cache, args.reuse_missing,
+    )
 
-    # 1. Fetch repos
-    repos = fetch_all_repos(args.username, token)
-    if not repos:
-        print("❌ No repos found.", file=sys.stderr)
-        sys.exit(1)
+    if args.svg:
+        print("", file=sys.stderr)
+        generate_svg(languages, args.username, args.theme, args.output, args.top)
 
-    public = sum(1 for r in repos if not r.get("private", False))
-    private = sum(1 for r in repos if r.get("private", False))
-    print(f"   → {public} public, {private} private\n", file=sys.stderr)
-
-    # 2. Aggregate languages (with cache)
-    languages = aggregate_languages(repos, token, cache, cache_path,
-                                    ttl_minutes=args.cache_ttl)
-
-    if not languages:
-        print("⚠️  No language data collected.", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"\n📊 Top languages:\n", file=sys.stderr)
-    for lang, b in languages[:10]:
-        print(f"   {lang:20s} {format_bytes(b)}", file=sys.stderr)
-
-    # 3. Save JSON
     if args.save_json:
         with open(args.save_json, "w") as f:
-            json.dump({lang: b for lang, b in languages}, f, indent=2)
-        print(f"\n💾 Raw data saved to: {args.save_json}", file=sys.stderr)
-
-    # 4. Generate SVG
-    generate_svg(languages, args.username, args.theme, args.output, args.top)
+            json.dump({l: b for l, b in languages}, f, indent=2)
+        print(f"💾 JSON saved to: {args.save_json}", file=sys.stderr)
 
 
 if __name__ == "__main__":
